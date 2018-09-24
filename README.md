@@ -1,4 +1,4 @@
-# Full/Responsive Side Navigation Example
+# Login Example
 
 <!-- [![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react) -->
 
