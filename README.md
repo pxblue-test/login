@@ -1,6 +1,6 @@
-# Full/Responsive Side Navigation Example
+# Login Example
 
-<!-- [![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react) -->
+[![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react)
 
 This is a sample application showing how to build a basic login page with authentication and route blocking.
 
