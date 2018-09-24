@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+html, body, .full{
+  height:100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html{
+  overflow: hidden;
+}
