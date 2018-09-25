@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { Observable, of } from 'rxjs';
+// import 'rxjs/add/observable/of';
 import { tap } from 'rxjs/operators';
 
-import { environment } from './environment';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class AppService {
@@ -16,7 +16,7 @@ export class AppService {
   }
 
   login(email: string, password: string): Observable<boolean> {
-    return Observable.of(environment.user.email === email && environment.user.password === password).pipe(
+    return of(environment.user.email === email && environment.user.password === password).pipe(
       tap(() => localStorage.setItem('currentUser', JSON.stringify(environment.user)))
     );
   }

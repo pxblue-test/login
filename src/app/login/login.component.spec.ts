@@ -112,6 +112,9 @@ describe('LoginComponent', () => {
     app.loginForm.controls.password.setValue("admin");
     expect(app.loginForm.valid).toBeTruthy();
   });
-
+  it('stores token after successful login', () => {
+    app.login();
+    expect(localStorage.getItem('currentUser')).toBeTruthy();
+  });
 
 });
