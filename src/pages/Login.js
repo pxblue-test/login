@@ -35,8 +35,8 @@ const styles = theme => ({
     background: "url('https://svgshare.com/i/8PV.svg'), linear-gradient(135deg, #127cbf 0%,#094d9c 100%)"
   },
   card:{
-    width: '70%',
-    maxWidth: '600px',
+    width: '600px',
+    maxWidth: '100%',
     padding: theme.spacing.unit * 3,
     display: 'flex',
     flexDirection: 'column',
@@ -58,20 +58,26 @@ const styles = theme => ({
   formFields: {
     marginBottom: theme.spacing.unit * 2
   },
-  // flexrow: {
-  //   display: 'flex',
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   justifyContent: 'space-between',
-  //   alignSelf: 'stretch',
-  //   marginBottom: theme.spacing.unit * 4
-  // },
+  flexrow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    alignSelf: 'stretch',
+    marginBottom: theme.spacing.unit * 4
+  },
   buttonRow:{
     marginBottom: theme.spacing.unit * 2,
     flexWrap: 'nowrap',
     [theme.breakpoints.down('xs')]:{
       flexWrap: 'wrap',
+      flexDirection: 'column-reverse',
       justifyContent: 'center'
+    }
+  },
+  loginButton:{
+    [theme.breakpoints.down('xs')]:{
+      width: '100%'
     }
   },
   link:{
@@ -80,8 +86,8 @@ const styles = theme => ({
       color: theme.palette.primary['300'],
     }
   },
-  last:{
-    marginLeft: theme.spacing.unit * 5
+  first:{
+    marginRight: theme.spacing.unit * 2
   },
   placeholderCyberSecurityLogo: {
     marginBottom: theme.spacing.unit * 2,
@@ -163,20 +169,21 @@ class Login extends React.Component {
               >
                 <FormControlLabel control={<Checkbox/>} label="Remember me" />
                 <Button type="submit" 
+                  className={classes.loginButton}
                   variant={(this.canLogIn()) ? "contained" : "text"} 
                   disabled={!this.canLogIn()} 
                   color="primary">
                   Log In
                 </Button>
               </Grid>
-              {/*<Grid container  className={classes.flexrow}>
+              <Grid container  className={classes.flexrow}>
                 <Typography variant="body1">
-                  <a className={classes.link} href="#">Request Access</a>
+                  <a className={classes.link + ' ' + classes.first} href="#">Request Access</a>
                 </Typography>
                 <Typography variant="body1">
-                  <a className={classes.link + ' ' + classes.last} href="#">Forgot Password?</a>
+                  <a className={classes.link} href="#">Forgot Password?</a>
                 </Typography>
-              </Grid>*/}
+              </Grid>
             </Grid>
           </form>
         
