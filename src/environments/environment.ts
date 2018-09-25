@@ -3,12 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  user: {
-  'email': 'admin@123.com',
-  'password': 'admin'
-  }
-  };
+production: false,
+user: {
+'email': 'admin@123.com',
+'password': 'admin'
+}
+};
 /*
  * In development mode, for easier debugging, you can ignore zone related error
  * stack frames such as `zone.run`/`zoneDelegate.invokeTask` by importing the
