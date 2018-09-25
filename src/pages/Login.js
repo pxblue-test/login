@@ -136,7 +136,7 @@ class Login extends React.Component {
           <form className={classes.form} onSubmit={ evt => this.props.login(this.state.email, this.state.password) }>
             <Grid container direction='column' justify='space-between'>
               <TextField
-                error={(this.validEmail(this.state.email)) ? true : false}
+                error={(!this.state.email || this.validEmail(this.state.email)) ? false : true}
                 label="Email Address"
                 className={classes.formFields}
                 value={this.state.username}

@@ -49,9 +49,12 @@ it('starts user on login page', () => {
     expect(login.find(Login).length).toBe(1);
 });
 
-it('stores token after successful login', () => {
+it('stores/clears token after successful login/logout', () => {
     const app = mount(<Provider store={store}><App/></Provider>);
     expect(app.find(Login).length).toBe(1);
     store.dispatch(Actions.login('fake','fake'));
     expect(store.getState().authentication.token).toEqual('token');
+    store.dispatch(Actions.logout());
+    expect(store.getState().authentication.token).toBeNull();
+    expect(store.getState().authentication.email).toBeNull();
 });
