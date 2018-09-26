@@ -79,7 +79,8 @@ const styles = theme => ({
   },
   loginButton:{
     [theme.breakpoints.down('xs')]:{
-      width: '100%'
+      width: '100%',
+      borderRadius: '36px'
     }
   },
   link:{
