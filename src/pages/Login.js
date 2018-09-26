@@ -181,7 +181,7 @@ class Login extends React.Component {
               </Grid>
               <Grid container  className={classes.flexrow}>
                 <Typography variant="body1">
-                  <a className={classes.link + ' ' + classes.first} href="#">Request Access</a>
+                  <a className={classes.link + ' ' + classes.first} href="#">Sign Up</a>
                 </Typography>
                 <Typography variant="body1">
                   <a className={classes.link} href="#">Forgot Password?</a>
