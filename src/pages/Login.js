@@ -105,7 +105,8 @@ const styles = theme => ({
 class Login extends React.Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    remember: true
   }
   canLogIn(){
     return (
@@ -170,7 +171,12 @@ class Login extends React.Component {
                 justify="space-between"
                 className={classes.buttonRow}
               >
-                <FormControlLabel control={<Checkbox/>} label="Remember me" />
+                <FormControlLabel 
+                  control={
+                    <Checkbox checked={this.state.remember}
+                      onChange={(evt) => this.setState({remember: evt.target.checked})}/>} 
+                  label="Remember me" 
+                />
                 <Button type="submit" 
                   className={classes.loginButton}
                   variant={(this.canLogIn()) ? "contained" : "text"} 
