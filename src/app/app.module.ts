@@ -50,6 +50,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
+import { AuthGuard } from './guards/auth.guard'
 
 @NgModule({
   exports: [
@@ -112,7 +113,7 @@ export class MaterialModule {}
   ],
   declarations: [AppComponent, LoginComponent, HomeComponent],
   bootstrap: [AppComponent],
-  providers: [AppService, {provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [AuthGuard, AppService, {provide: APP_BASE_HREF, useValue : '/' }],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
 export class AppModule {}

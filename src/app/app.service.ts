@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import 'rxjs/add/observable/of';
 import { tap } from 'rxjs/operators';
 
-import { environment } from '../environments/environment';
 
 @Injectable()
 export class AppService {
@@ -16,14 +15,18 @@ export class AppService {
   }
 
   login(email: string, password: string): Observable<boolean> {
-    return Observable.of(environment.user.email === email && environment.user.password === password).pipe(
-      tap(() => localStorage.setItem('currentUser', JSON.stringify(environment.user)))
-    );
+
+// if email is valid (matches regex) and password length > 0
+    let user= {
+      'email': email,
+      'password': password
+    }
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    return Observable.of(true);
   }
 
-
   logout() {
-    localStorage.setItem('currentUser', null);
+    localStorage.removeItem('currentUser');
   }
 
 }
