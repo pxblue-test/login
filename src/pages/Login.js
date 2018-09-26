@@ -37,6 +37,8 @@ const styles = theme => ({
   card:{
     width: '600px',
     maxWidth: '100%',
+    maxHeight: '100%',
+    overflowY: 'auto',
     padding: theme.spacing.unit * 3,
     display: 'flex',
     flexDirection: 'column',
@@ -177,19 +179,12 @@ class Login extends React.Component {
                 </Button>
               </Grid>
               <Grid container  className={classes.flexrow}>
-                <Button 
-                  color="primary" 
-                  href="#" 
-                  className={classes.first}
-                  style={{textTransform: 'none'}}>
-                  Sign Up
-                </Button>
-                <Button 
-                  color="primary" 
-                  href="#" 
-                  style={{textTransform: 'none'}}>
-                  Forgot Password?
-                </Button>
+                <Typography variant="body1">
+                  <a className={classes.link + ' ' + classes.first} href="#">Request Access</a>
+                </Typography>
+                <Typography variant="body1">
+                  <a className={classes.link} href="#">Forgot Password?</a>
+                </Typography>
               </Grid>
             </Grid>
           </form>
