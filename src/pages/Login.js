@@ -186,10 +186,10 @@ class Login extends React.Component {
                 </Button>
               </Grid>
               <Grid container  className={classes.flexrow}>
-                <Typography variant="body1">
+                <Typography variant="body2">
                   <a className={classes.link + ' ' + classes.first} href="#">Sign Up</a>
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body2">
                   <a className={classes.link} href="#">Forgot Password?</a>
                 </Typography>
               </Grid>
@@ -203,7 +203,7 @@ class Login extends React.Component {
             border="0"
           />
 
-          <Typography variant="body1" className={classes.legalText}>
+          <Typography variant="body2" className={classes.legalText}>
             By logging in you agree to our<br />
             <a className={classes.link} href="#">Terms and Conditions</a> and <a className={classes.link} href="">Privacy Policy</a>
           </Typography>
