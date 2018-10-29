@@ -32,7 +32,7 @@ class Home extends React.Component {
 
     return (!this.props.token ? (<Redirect to={'/login'}/>) : (
       <div style={{margin: '20px'}}>
-        <Typography variant="title">{`Welcome to the app, ${this.props.email}!`}</Typography>
+        <Typography variant="h6">{`Welcome to the app, ${this.props.email}!`}</Typography>
         <Button 
           type="submit" 
           variant="contained" 
