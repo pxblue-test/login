@@ -1,119 +1,40 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgModule,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
-import {CommonModule, APP_BASE_HREF} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import 'hammerjs';
 
-import {A11yModule} from '@angular/cdk/a11y';
-import {BidiModule} from '@angular/cdk/bidi';
-import {ObserversModule} from '@angular/cdk/observers';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {PlatformModule} from '@angular/cdk/platform';
-import {PortalModule} from '@angular/cdk/portal';
-import {ScrollDispatchModule} from '@angular/cdk/scrolling';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import {CdkTableModule} from '@angular/cdk/table';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule, 
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
+  MatButtonModule, MatCheckboxModule,
+  MatFormFieldModule, MatInputModule,
+  MatOptionModule, MatSelectModule,
+  MatSlideToggleModule, MatCardModule, MatChipsModule,
+  MatToolbarModule, MatListModule, MatIconModule
 } from '@angular/material';
-import {AppComponent} from './app.component';
-import { AppService } from './app.service';
-import { RouterModule } from '@angular/router';
+import { MatIconRegistry } from '@angular/material';
 import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
-import { routing } from './app.routing';
-import { AuthGuard } from './guards/auth.guard'
+import { ForgotPasswordComponent } from './forgot/forgot.component';
+import { appRoutes } from './app.routing';
+import { AuthGuard } from './guards/auth.guard';
+import { AppService } from './app.service';
+import { APP_BASE_HREF } from '@angular/common';
+
+
 
 @NgModule({
-  exports: [
-    // CDK
-    A11yModule,
-    BidiModule,
-    ObserversModule,
-    OverlayModule,
-    PlatformModule,
-    PortalModule,
-    ScrollDispatchModule,
-    CdkStepperModule,
-    CdkTableModule,
-    
-    // Material
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatSliderModule,
-    MatSnackBarModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatNativeDateModule,
-  ],
-  declarations: []
-})
-export class MaterialModule {}
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule,
+    MatOptionModule, MatSelectModule, MatSlideToggleModule, MatCardModule, MatIconModule,
+    MatChipsModule, MatToolbarModule, MatIconModule, MatListModule, RouterModule.forRoot(appRoutes)],
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    CommonModule,
-    MaterialModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    BrowserAnimationsModule,
-    routing
-  ],
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, ForgotPasswordComponent],
   bootstrap: [AppComponent],
-  providers: [AuthGuard, AppService, {provide: APP_BASE_HREF, useValue : '/' }],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
+  providers: [MatIconRegistry, AppService, AuthGuard, {provide: APP_BASE_HREF, useValue : '/' }]
 })
-export class AppModule {}
+export class AppModule {
+
+}

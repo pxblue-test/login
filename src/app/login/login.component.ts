@@ -3,7 +3,7 @@ import {FormBuilder,FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const EMAIL_REGEX =  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 @Component({
   selector: 'app-login',
@@ -22,6 +22,12 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.compose([Validators.required])],
       remember: [true]
     })
+  }
+  Password(){
+    this.router.navigateByUrl('forgot');
+  }
+  signUp(){
+    this.router.navigateByUrl('registration');
   }
 
 login(){

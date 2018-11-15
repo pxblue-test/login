@@ -1,0 +1,49 @@
+<div class="full-page">
+	<div class="page-block" flex>
+		<div class="side-block1 text-center" flex-1>
+			<img src="https://image.ibb.co/nuN8Re/12.jpg" alt="Company or Product Logo" class="logo" />
+      <div class="sidebar-footer">
+        <figure><img src="https://image.ibb.co/kzkCme/Logo_Samples2_91_min.jpg" alt=""><strong>community certified</strong></figure>
+        <p>By logging in you agree to our <br> <a routerLink="/">Terms and Conditions</a> and <a routerLink="/">Privacy Policy</a></p>
+      </div>
+    </div>
+    <div class="side-block2" flex-1>
+      <ng-container *ngIf="showEmailForm">
+        <h4>Enter your email</h4>
+        <form [formGroup]="emailForm">
+          <div class="form-field-set">
+            <div class="form-group" flex align-center>
+              <mat-icon>email </mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="Email Address" formControlName="email" type="email" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="next-button">
+            <button [disabled]="!emailForm.valid" mat-raised-button color="primary" (click)="emailContinue()">Continue</button>
+          </div>
+      </form>	
+      </ng-container>
+      <ng-container *ngIf="showPasswordForm">
+        <h4>Create New Password</h4>
+        <form [formGroup]="passwordForm">
+          <div class="form-field-set">
+            <div class="form-group flex-center">
+              <mat-icon>vpn_key</mat-icon>
+              <mat-form-field>
+                <input matInput type="text" placeholder="Password" formControlName="password" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput type="text" placeholder="Confirm Password" formControlName="confirmPassword" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="flex-center">
+            <button mat-button (click)="backtoEmail()">BACK</button>
+            <button [disabled]="!passwordForm.valid" mat-raised-button color="primary" (click)="changePassword()">Change Password</button>            
+          </div>
+        </form>	
+      </ng-container> 
+    </div>
+	</div>
+</div>
