@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup, FormControl, Validators, AbstractControl} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
+import { RegistrationComponent } from '../registration/registration.component';
 
  const EMAIL_REGEX =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 @Component({
   selector: 'app-forgot',
   templateUrl: './forgot.component.html',
-  styleUrls: ['./forgot.component.scss']
+  styleUrls: ['../registration/registration.component.scss']
 })
 export class ForgotPasswordComponent implements OnInit {
   emailForm:FormGroup;
