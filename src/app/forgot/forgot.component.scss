@@ -43,13 +43,13 @@
   display: block;
 }
 
-.side-block1 {
+.left-block {
   color: #fff;
   background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%, #094d9c 100%);
   padding: 7% 0;
 }
 
-.side-block2 {
+.right-block {
   padding: 25px;
   h4 {
     margin: 0 0 10px;
@@ -92,7 +92,7 @@
 
 .form-field-set {
   padding-top: 30px;
-  min-height: 400px;
+ 
 }
 
 .already-have-account {
@@ -113,13 +113,13 @@
 }
 
 @media (max-width:767px) {
-  .side-block1 {
+  .left-block {
     display: none;
   }
 }
 
 @media (max-width:480px) {
-  .side-block2 {
+  .right-block {
     padding: 15px;
   }
   .form-field-set {

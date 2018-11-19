@@ -3,7 +3,7 @@ import {FormBuilder,FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
-const EMAIL_REGEX =  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const EMAIL_REGEX =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 @Component({
   selector: 'app-login',

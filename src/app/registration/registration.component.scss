@@ -43,13 +43,13 @@
   display: block;
 }
 
-.side-block1 {
+.left-block {
   color: #fff;
   background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%, #094d9c 100%);
   padding: 7% 0;
 }
 
-.side-block2 {
+.right-block {
   padding: 25px;
   h4 {
     margin: 0 0 10px;
@@ -111,15 +111,22 @@
 .links:visited {
   color: #4da3d4;
 }
+.resent-code{
+  color: #4da3d4;
+  margin-left: 20px;
+}
+.resent-code:visited{
+  color: #4da3d4;
+}
 
 @media (max-width:767px) {
-  .side-block1 {
+  .left-block1 {
     display: none;
   }
 }
 
 @media (max-width:480px) {
-  .side-block2 {
+  .right-block2 {
     padding: 15px;
   }
   .form-field-set {

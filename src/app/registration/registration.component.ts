@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup, FormControl, Validators} from '@angular/forms';
+import {FormBuilder,FormGroup, FormControl, Validators, AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
@@ -23,10 +23,7 @@ export class RegistrationComponent implements OnInit{
 
   ngOnInit() {
     this.registrationForm = this.fb.group({
-      firstName: ['', Validators.compose([Validators.required])],
-      lastName: ['', Validators.compose([Validators.required])],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
-      confirmEmail: ['', Validators.compose([Validators.required, Validators.email])]
+      email: ['', Validators.compose([Validators.required, Validators.email])]
     });
 
     this.verificationForm = this.fb.group({
@@ -41,6 +38,19 @@ export class RegistrationComponent implements OnInit{
       password: ['', Validators.compose([Validators.required])],
       confirmPassword: ['', Validators.compose([Validators.required])]
     });
+    this.accountForm.validator = this.matchingPasswords;
+  }
+
+  matchingPasswords(AC: AbstractControl) {
+    if (AC.get('password') && AC.get('confirmPassword')) {
+      const password = AC.get('password').value;
+      const confirmPassword = AC.get('confirmPassword').value;
+      if (password !== confirmPassword) {
+        AC.get('confirmPassword').setErrors({matchingPasswords: true});
+      } else {
+        return null;
+      }
+    }
   }
 
   backtoRegister(){
