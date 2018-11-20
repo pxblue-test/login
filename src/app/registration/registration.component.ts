@@ -3,7 +3,7 @@ import {FormBuilder,FormGroup, FormControl, Validators, AbstractControl, NG_VALI
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
-// const EMAIL_REGEX =  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+ const EMAIL_REGEX =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 @Component({
   selector: 'app-registration',
@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit{
 
   ngOnInit() {
     this.registrationForm = this.fb.group({
-      email: ['', Validators.compose([Validators.required, Validators.email])]
+      email: ['', Validators.compose([Validators.required, Validators.email, Validators.pattern(EMAIL_REGEX)])]
     });
 
     this.verificationForm = this.fb.group({
