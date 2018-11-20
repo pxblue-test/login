@@ -105,10 +105,7 @@ describe('RegistrationComponent', () => {
     });
 
     it('registration', () => {
-        component.registrationForm.controls['firstName'].setValue('admin');
-        component.registrationForm.controls['lastName'].setValue('admin');
         component.registrationForm.controls['email'].setValue('admin@123.com');
-        component.registrationForm.controls['confirmEmail'].setValue('admin@123.com');
         component.registration();
         expect(component.showVerificationForm).toBeTruthy();
         expect(component.showRegisterForm).toBeFalsy();
