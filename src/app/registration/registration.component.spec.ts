@@ -106,7 +106,6 @@ describe('RegistrationComponent', () => {
 
     it('registration', () => {
         component.registrationForm.controls['email'].setValue('admin@123.com');
-      
         component.registration();
         expect(component.showVerificationForm).toBeTruthy();
         expect(component.showRegisterForm).toBeFalsy();
