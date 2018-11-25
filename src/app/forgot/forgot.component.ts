@@ -56,7 +56,9 @@ export class ForgotPasswordComponent implements OnInit {
     this.showEmailForm = true;
     this.showPasswordForm = false;
   }
-  
+  backtologin(){
+    this.router.navigateByUrl('login');
+  }
 
   changePassword(){
     if(this.passwordForm.valid){
