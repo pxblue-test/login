@@ -24,7 +24,7 @@ export class AppService {
     localStorage.setItem('currentUser', JSON.stringify(user));
     return Observable.of(true);
   }
-
+// removes the current user from local storage when user logout
   logout() {
     localStorage.removeItem('currentUser');
   }

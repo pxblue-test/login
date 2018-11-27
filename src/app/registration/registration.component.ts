@@ -74,7 +74,7 @@ export class RegistrationComponent implements OnInit{
     this.showVerificationForm = false;
     this.showAccountForm = true;
   }
-
+// creates the user account and redirects to login page
   createAccount(){
     if(this.accountForm.valid){
       this.router.navigateByUrl('login');
