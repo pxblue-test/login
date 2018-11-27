@@ -106,7 +106,7 @@ describe('RegistrationComponent', () => {
 
     it('registration', () => {
         component.registrationForm.controls['email'].setValue('admin@123.com');
-        component.registration();
+        component.sendEmailVerification();
         expect(component.showVerificationForm).toBeTruthy();
         expect(component.showRegisterForm).toBeFalsy();
     });
@@ -118,7 +118,7 @@ describe('RegistrationComponent', () => {
     });
 
     it('goToAccount', () => {
-        component.goToAccount();
+        component.verifyEmail();
         expect(component.showAccountForm).toBeTruthy();
         expect(component.showVerificationForm).toBeFalsy();
     });

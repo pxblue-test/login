@@ -21,9 +21,8 @@
             </div>
           </div>
           <div class="next-button">
-               <button mat-button (click)="backtologin()">BACK</button> 
-            <button [disabled]="!emailForm.valid" mat-raised-button color="primary" (click)="emailContinue()">Continue</button>
-         
+              <button mat-button (click)="backtologin()">BACK</button> 
+              <button [disabled]="!emailForm.valid" mat-raised-button color="primary" (click)="sendResetEmail()">Continue</button>
           </div>
       </form>	
       </ng-container>
@@ -42,7 +41,7 @@
             </div>
           </div>
           <div class="flex-center">
-            <button mat-button (click)="backtoEmail()">BACK</button>
+            <button mat-button (click)="backtologin()">CANCEL</button>
             <button [disabled]="!passwordForm.valid" mat-raised-button color="primary" (click)="changePassword()">Change Password</button>            
           </div>
         </form>	
