@@ -24,8 +24,11 @@ export class AppService {
     localStorage.setItem('currentUser', JSON.stringify(user));
     return Observable.of(true);
   }
-
+// removes the current user from local storage when user logout
   logout() {
+    /*
+      HERE YOU NEED TO MAKE A CALL TO YOUR API TO INVALIDATE THE USER'S AUTHENTICATION TOKEN.
+    */
     localStorage.removeItem('currentUser');
   }
 

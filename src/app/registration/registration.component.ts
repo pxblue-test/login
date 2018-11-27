@@ -58,8 +58,12 @@ export class RegistrationComponent implements OnInit{
     this.showVerificationForm = false;
   }
 
-  registration() {
+  sendEmailVerification() {
     if(this.registrationForm.valid){
+      /*
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND A VERIFICATION EMAIL/CODE. 
+        WE FAKE THIS (ASSUMING SUCCESS).
+      */
       this.showRegisterForm = false;
       this.showVerificationForm = true;
     }
@@ -70,14 +74,29 @@ export class RegistrationComponent implements OnInit{
     this.showAccountForm = false;
   }
 
-  goToAccount(){
+  backtoLogin(){
+    this.router.navigateByUrl('login');
+  }
+
+  verifyEmail(){
+    /*
+      HERE YOU NEED TO MAKE A CALL TO YOUR API TO CHECK THE VERIFICATION CODE. 
+      WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
+      IN YOUR APPLICATION.
+    */
     this.showVerificationForm = false;
     this.showAccountForm = true;
   }
-
+// creates the user account and redirects to login page
   createAccount(){
     if(this.accountForm.valid){
-      this.router.navigateByUrl('login');
+      /*
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO CREATE THE NEW USER ACCOUNT. 
+        WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
+        IN YOUR APPLICATION. YOU MAY ALSO WANT TO AUTOMATICALLY LOG THE NEW USER
+        IN AND TAKE THEM TO THEIR PROFILE/HOMEPAGE.
+      */
+      this.backtoLogin();
     }
   }
 

@@ -88,6 +88,9 @@
 
 .next-button {
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .form-field-set {

@@ -100,7 +100,7 @@ describe('ForgotPasswordComponent', () => {
 
   it('emailContinue when email form is valid', () => {
     component.emailForm.controls['email'].setValue('admin@123.com');
-    component.emailContinue();
+    component.sendResetEmail();
     expect(component.emailForm.valid).toBeTruthy();
     expect(component.showPasswordForm).toBeTruthy();
     expect(component.showEmailForm).toBeFalsy();
@@ -108,16 +108,11 @@ describe('ForgotPasswordComponent', () => {
 
   it('emailContinue when email form is invalid', () => {
     component.emailForm.controls['email'].setValue('admin');
-    component.emailContinue();
+    component.sendResetEmail();
     expect(component.emailForm.valid).toBeFalsy();
     expect(component.showPasswordForm).toBeFalsy();
     expect(component.showEmailForm).toBeTruthy();
   });
 
-  it('backtoEmail', () => {
-    component.backtoEmail();
-    expect(component.showPasswordForm).toBeFalsy();
-    expect(component.showEmailForm).toBeTruthy();
-  });
 
 });

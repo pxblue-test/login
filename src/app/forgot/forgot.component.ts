@@ -45,21 +45,30 @@ export class ForgotPasswordComponent implements OnInit {
     }
   }
 
-  emailContinue(){
+  sendResetEmail(){
     if(this.emailForm.valid){
+      /*
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND AN EMAIL WITH PASSWORD
+        RESET INSTRUCTIONS. WE FAKE THIS AND NAVIGATE DIRECTLY TO THE PAGE THAT
+        ALLOWS THE USER TO SET A NEW PASSWORD. YOU WILL NEED TO HANDLE THIS DIFFERENTLY
+        IN YOUR CODE BY DEEP LINKING TO A PAGE LIKE THIS FROM THE RESET EMAIL.
+      */
       this.showEmailForm = false;
       this.showPasswordForm = true;
     }
   }
 
-  backtoEmail(){
-    this.showEmailForm = true;
-    this.showPasswordForm = false;
+  backtologin(){
+    this.router.navigateByUrl('login');
   }
-  
 
   changePassword(){
     if(this.passwordForm.valid){
+      /*
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO RESET THE USER'S PASSWORD. 
+        WE FAKE THIS BY ASSUMING SUCCESS AND NAVIGATE TO THE LOGIN PAGE. 
+        YOU WILL NEED TO HANDLE DIFFERENT CASES HERE INCLUDING ERROR CONDITIONS.
+      */
       this.router.navigateByUrl('login');
     }
   }

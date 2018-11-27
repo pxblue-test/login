@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="next-button">
-            <button [disabled]="!registrationForm.valid" mat-raised-button color="primary" (click)="registration()">NEXT</button>
+            <button [disabled]="!registrationForm.valid" mat-raised-button color="primary" (click)="sendEmailVerification()">NEXT</button>
           </div>
       </form>	
       </ng-container>
@@ -38,11 +38,9 @@
             </mat-form-field>
              <a color="primary"  class="resent-code">Resend Code</a>
             </div>
-           
-
           <div class="flex-center">
             <button mat-button (click)="backtoRegister()">BACK</button>
-            <button [disabled]="!verificationForm.valid" mat-raised-button color="primary" (click)="goToAccount()">NEXT</button>            
+            <button [disabled]="!verificationForm.valid" mat-raised-button color="primary" (click)="verifyEmail()">NEXT</button>            
           </div>
         </form>	
       </ng-container>
@@ -84,8 +82,8 @@
             </div>
           </div>
           <div class="flex-center">
-            <button mat-button (click)="backtoVerification()">BACK</button>
-            <button [disabled]="!accountForm.valid" mat-raised-button color="primary" (click)="createAccount()">NEXT</button>            
+            <button mat-button (click)="backtoLogin()">CANCEL</button>
+            <button [disabled]="!accountForm.valid" mat-raised-button color="primary" (click)="createAccount()">FINISH</button>            
           </div>
         </form>	
       </ng-container> 
