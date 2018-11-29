@@ -13,7 +13,6 @@ import {
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
@@ -102,9 +101,9 @@ class Register extends React.Component {
  
 validPhone(inptxt){
  return (
-   inptxt &&
-     inptxt.length == 10 &&
-   inptxt.match(PHONE_REGEX)
+    inptxt &&
+    inptxt.length === 10 &&
+    inptxt.match(PHONE_REGEX)
  );
 }
 sendVerificationPhone(){

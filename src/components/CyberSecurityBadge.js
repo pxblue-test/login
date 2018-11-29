@@ -44,7 +44,7 @@ class CyberSecurityBadge extends React.Component {
                 />
                 <Typography variant="body2" color={'inherit'}>
                     {this.props.legalText}<br />
-                    <a className={linkColor} href="#">Terms and Conditions</a> and <a className={linkColor} href="">Privacy Policy</a>
+                    <a className={linkColor} href="">Terms and Conditions</a> and <a className={linkColor} href="">Privacy Policy</a>
                 </Typography>
             </div>
         );
