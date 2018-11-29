@@ -33,10 +33,6 @@ const mapDispatchToProps = (dispatch)=>{
 }
 
 const styles = theme => ({
-  // container:{
-  //   height: '100%',
-  //   background: "url('https://svgshare.com/i/8PV.svg'), linear-gradient(135deg, #127cbf 0%,#094d9c 100%)"
-  // },
   card:{
     width: '600px',
     maxWidth: '100%',
@@ -54,10 +50,6 @@ const styles = theme => ({
       maxWidth: '100%'
     }
   },
-  // placeholderAppLogo: {
-  //   height: '80px',
-  //   width: 'auto'
-  // },
   formFields: {
     marginBottom: theme.spacing.unit * 2
   },
@@ -92,11 +84,6 @@ const styles = theme => ({
   first:{
     marginRight: theme.spacing.unit * 2
   },
-  // placeholderCyberSecurityLogo: {
-  //   marginBottom: theme.spacing.unit * 2,
-  //   height: '60px',
-  //   width: '60px'
-  // },
   legalText: {
     textAlign: 'center'
   }
@@ -105,7 +92,8 @@ const styles = theme => ({
 class Login extends React.Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    remember: true
   }
   canLogIn(){
     return (
@@ -165,7 +153,7 @@ class Login extends React.Component {
                 justify="space-between"
                 className={classes.buttonRow}
               >
-                <FormControlLabel control={<Checkbox/>} label="Remember me" />
+                <FormControlLabel control={<Checkbox checked={this.state.remember} onChange={(evt)=>this.setState({remember: evt.target.checked})}/>} label="Remember me" />
                 <Button type="submit" 
                   className={classes.loginButton}
                   variant={(this.canLogIn()) ? "contained" : "text"} 
@@ -176,7 +164,7 @@ class Login extends React.Component {
               </Grid>
               <Grid container  className={classes.flexrow}>
                 <Typography variant="body2">
-                  <Link to="/register" className={classes.link + ' ' + classes.first}>Request Access</Link>
+                  <Link to="/register" className={classes.link + ' ' + classes.first}>Sign Up</Link>
                 </Typography>
                
                 <Typography variant="body2">

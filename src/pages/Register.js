@@ -43,13 +43,15 @@ const styles = theme => ({
   formField:{
     marginLeft: theme.spacing.unit*2,
     '&$noIcon':{
-      marginLeft: theme.spacing.unit*2 + 24
+      marginLeft: theme.spacing.unit*2 + 24,
+      [theme.breakpoints.down('sm')]:{
+        marginLeft: 0
+      }
     },
     [theme.breakpoints.down('sm')]:{
       flexBasis: '100%',
       marginLeft: 0,
-      marginTop: '10px',
-      maxWidth: '100%'
+      marginTop: theme.spacing.unit*1
     }
   },
   icon: {
@@ -57,18 +59,7 @@ const styles = theme => ({
       display: 'none'
     }
   },
-  noIcon:{
-    marginLeft: '40px',
-    [theme.breakpoints.down('sm')]:{
-      marginLeft: '0 !important'
-    }
-  },
-  alreadyAccount: {
-    [theme.breakpoints.down('sm')]:{
-      marginRight: '20px',
-      textAlign: 'left'
-    }
-  }
+  noIcon:{}
 })
 
 const mapDispatchToProps = (dispatch)=>{
@@ -108,14 +99,14 @@ class Register extends React.Component {
       address.match(EMAIL_REGEX)
     );
   }
-
-  validPhone(inptxt){
-   return (
-     inptxt &&
-       inptxt.length == 10 &&
-     inptxt.match(PHONE_REGEX)
-   );
-  }
+ 
+validPhone(inptxt){
+ return (
+   inptxt &&
+     inptxt.length == 10 &&
+   inptxt.match(PHONE_REGEX)
+ );
+}
 sendVerificationPhone(){
   this.props.sendVerificationPhone(this.state.phone);
   this.next();
@@ -182,9 +173,7 @@ sendVerificationPhone(){
                 <SidePanel title={'Register an Account'}
                   info={'To register for an account, enter your email address below. We will send you an email with a confirmation code to verify your address.'}
                   backComponent={(
-                    <div className={classes.alreadyAccount}>
-                      <Typography variant="body1">Already have an account?<Link to="/login" className="links">Log In</Link></Typography>
-                    </div>
+                      <Typography variant="body1" style={{marginRight: '1rem'}}>Already have an account? <Link to="/login" className="links">Log In</Link></Typography>
                   )}
                   onNext={()=>this.sendVerificationEmail()}
                   nextLabel={'Next'}
