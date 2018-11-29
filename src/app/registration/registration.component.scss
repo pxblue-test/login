@@ -15,21 +15,14 @@
 }
 
 .sidebar-footer {
-  figure {
-    strong {
-      text-transform: uppercase;
-      display: block;
-      font-size: 11px;
-      margin-top: 5px;
-    }
-  }
-  p {
-    margin: 20px 0 0;
-    font-size: 11px;
     a {
       color: #fff;
     }
-  }
+}
+.flex-center1 {
+  display: flex;
+  align-items: center;
+ 
 }
 
 .text-center {
