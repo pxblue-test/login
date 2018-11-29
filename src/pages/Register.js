@@ -108,14 +108,14 @@ class Register extends React.Component {
       address.match(EMAIL_REGEX)
     );
   }
+
   validPhone(inptxt){
-  return (
-    inptxt &&
-    inptxt.length > 0 &&
-      inptxt.length <= 10 &&
-    inptxt.match(PHONE_REGEX)
-  );
-}
+   return (
+     inptxt &&
+       inptxt.length == 10 &&
+     inptxt.match(PHONE_REGEX)
+   );
+  }
 sendVerificationPhone(){
   this.props.sendVerificationPhone(this.state.phone);
   this.next();
