@@ -36,6 +36,8 @@ const styles = theme => ({
   card:{
     width: '600px',
     maxWidth: '100%',
+    maxHeight: '100%',
+    overflow: 'auto',
     padding: theme.spacing.unit * 3,
     display: 'flex',
     flexDirection: 'column',

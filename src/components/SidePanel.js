@@ -7,6 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
     rightBlock:{
         padding: theme.spacing.unit * 3,
+        maxHeight: '100%',
+    overflow: 'auto'
     },
     buttonPanel:{
         textAlign: 'right',
