@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {routerReducer} from 'react-router-redux'
+// import {routerReducer} from 'react-router-redux'
 
 const authReducer = (state=[], action) => {
 	switch(action.type){
@@ -15,6 +15,15 @@ const authReducer = (state=[], action) => {
       return {...state,
         token: null,
         email: null
+      };
+    case 'REGISTER':
+      return {...state,
+        firstName: action.data.firstName,
+        lastName: action.data.lastName,
+        email: action.data.email,
+        role: action.data.role,
+        phone: action.data.phone,
+        password: action.data.password,
       };
 		default:
 			return state;

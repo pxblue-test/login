@@ -2,16 +2,16 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Redirect,
-  Switch,
-  withRouter
+  Switch
 } from 'react-router-dom'
 import {connect} from 'react-redux';
 
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Register from './pages/Register';
+import ForgotPassword from './pages/Forgot';
 
 // Utility Components for Auth Guard
 import PrivateRoute from './components/PrivateRoute';
@@ -37,6 +37,8 @@ class App extends React.Component {
             canActivate={() => this.hasAuth()}
           />
           <Route exact path="/login" component={Login}/>
+          <Route exact path="/register" component={Register}/>
+          <Route exact path="/forgot-password" component={ForgotPassword}/>
           <Redirect to='/'/>
         </Switch>
       </Router>

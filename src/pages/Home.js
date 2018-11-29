@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom'
 
@@ -28,11 +28,11 @@ class Home extends React.Component {
     const { from } = this.props.location.state || { 
       from: { pathname: '/' } 
     }
-    const { classes } = this.props;
+    // const { classes } = this.props;
 
     return (!this.props.token ? (<Redirect to={'/login'}/>) : (
       <div style={{margin: '20px'}}>
-        <Typography variant="h6">{`Welcome to the app, ${this.props.email}!`}</Typography>
+        <Typography variant="title">{`Welcome to the app, ${this.props.email}!`}</Typography>
         <Button 
           type="submit" 
           variant="contained" 

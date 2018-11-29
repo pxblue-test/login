@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 // Redux Actions
 import {login as LoginAction} from '../actions/actions.js';
@@ -14,7 +14,10 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
+import CyberSecurityBadge from '../components/CyberSecurityBadge';
+
 import { withStyles } from '@material-ui/core/styles';
+import ProductLogo from '../components/ProductLogo.js';
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 const mapStateToProps = (state)=>{
@@ -30,15 +33,13 @@ const mapDispatchToProps = (dispatch)=>{
 }
 
 const styles = theme => ({
-  container:{
-    height: '100%',
-    background: "url('https://svgshare.com/i/8PV.svg'), linear-gradient(135deg, #127cbf 0%,#094d9c 100%)"
-  },
+  // container:{
+  //   height: '100%',
+  //   background: "url('https://svgshare.com/i/8PV.svg'), linear-gradient(135deg, #127cbf 0%,#094d9c 100%)"
+  // },
   card:{
     width: '600px',
     maxWidth: '100%',
-    maxHeight: '100%',
-    overflowY: 'auto',
     padding: theme.spacing.unit * 3,
     display: 'flex',
     flexDirection: 'column',
@@ -53,10 +54,10 @@ const styles = theme => ({
       maxWidth: '100%'
     }
   },
-  placeholderAppLogo: {
-    height: '80px',
-    width: 'auto'
-  },
+  // placeholderAppLogo: {
+  //   height: '80px',
+  //   width: 'auto'
+  // },
   formFields: {
     marginBottom: theme.spacing.unit * 2
   },
@@ -79,8 +80,7 @@ const styles = theme => ({
   },
   loginButton:{
     [theme.breakpoints.down('xs')]:{
-      width: '100%',
-      borderRadius: '36px'
+      width: '100%'
     }
   },
   link:{
@@ -92,11 +92,11 @@ const styles = theme => ({
   first:{
     marginRight: theme.spacing.unit * 2
   },
-  placeholderCyberSecurityLogo: {
-    marginBottom: theme.spacing.unit * 2,
-    height: '60px',
-    width: '60px'
-  },
+  // placeholderCyberSecurityLogo: {
+  //   marginBottom: theme.spacing.unit * 2,
+  //   height: '60px',
+  //   width: '60px'
+  // },
   legalText: {
     textAlign: 'center'
   }
@@ -105,8 +105,7 @@ const styles = theme => ({
 class Login extends React.Component {
   state = {
     email: '',
-    password: '',
-    remember: true
+    password: ''
   }
   canLogIn(){
     return (
@@ -134,15 +133,10 @@ class Login extends React.Component {
       <Grid container 
         alignItems="center" 
         justify="center" 
-        className={classes.container}
+        className={"branding-panel"}
       >
         <Paper className={classes.card}>
-          {/* PLACEHOLDER IMAGE: please use the correct company or product logo here */}
-          <img className={classes.placeholderAppLogo} 
-            src="https://image.ibb.co/nuN8Re/12.jpg" 
-            alt="Company or Product Logo" 
-            border="0"
-            />
+          <ProductLogo/>
           <form className={classes.form} onSubmit={ evt => this.props.login(this.state.email, this.state.password) }>
             <Grid container direction='column' justify='space-between'>
               <TextField
@@ -171,12 +165,7 @@ class Login extends React.Component {
                 justify="space-between"
                 className={classes.buttonRow}
               >
-                <FormControlLabel 
-                  control={
-                    <Checkbox checked={this.state.remember}
-                      onChange={(evt) => this.setState({remember: evt.target.checked})}/>} 
-                  label="Remember me" 
-                />
+                <FormControlLabel control={<Checkbox/>} label="Remember me" />
                 <Button type="submit" 
                   className={classes.loginButton}
                   variant={(this.canLogIn()) ? "contained" : "text"} 
@@ -187,26 +176,16 @@ class Login extends React.Component {
               </Grid>
               <Grid container  className={classes.flexrow}>
                 <Typography variant="body2">
-                  <a className={classes.link + ' ' + classes.first} href="#">Sign Up</a>
+                  <Link to="/register" className={classes.link + ' ' + classes.first}>Request Access</Link>
                 </Typography>
+               
                 <Typography variant="body2">
-                  <a className={classes.link} href="#">Forgot Password?</a>
+                <Link to="/forgot-password" className={classes.link}>Forgot Password?</Link>
                 </Typography>
               </Grid>
             </Grid>
           </form>
-        
-          {/* PLACEHOLDER IMAGE: please use the correct cybersecurity certification logo here */}
-          <img className={classes.placeholderCyberSecurityLogo} 
-            src="https://image.ibb.co/kzkCme/Logo_Samples2_91_min.jpg" 
-            alt="Cybersecurity Badge" 
-            border="0"
-          />
-
-          <Typography variant="body2" className={classes.legalText}>
-            By logging in you agree to our<br />
-            <a className={classes.link} href="#">Terms and Conditions</a> and <a className={classes.link} href="">Privacy Policy</a>
-          </Typography>
+          <CyberSecurityBadge/>
         </Paper>
       </Grid>
     ));
