@@ -73,18 +73,22 @@ const mapDispatchToProps = (dispatch)=>{
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const PHONE_REGEX = /^[0-9]*$/;
 class Register extends React.Component {
-  state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    confirmEmail: '',
-    verificationCode: '',
-    role: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    currentPage: 0
+  constructor(props){
+    super(props);
+    this.state={
+      firstName: '',
+      lastName: '',
+      email: '',
+      confirmEmail: '',
+      verificationCode: '',
+      role: '',
+      phone: '',
+      password: '',
+      confirmPassword: '',
+      currentPage: 0      
+    }
   }
+
   passwordsMatch(){
     return !(this.state.password.length > 0 &&
             this.state.confirmPassword.length > 0 &&
@@ -103,7 +107,7 @@ class Register extends React.Component {
 validPhone(inptxt){
  return (
    inptxt &&
-     inptxt.length == 10 &&
+     inptxt.length === 10 &&
    inptxt.match(PHONE_REGEX)
  );
 }

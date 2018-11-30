@@ -9,9 +9,7 @@ import {changePassword as ChangePasswordAction,
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { Link } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import EmailIcon from '@material-ui/icons/Email';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
@@ -53,13 +51,17 @@ const mapDispatchToProps = (dispatch)=>{
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 class ForgotPassword extends React.Component {
-  state = {
-    email: '',
-    password: '',
-    confirmPassword: '',
-    verificationCode: '',
-    currentPage: 0
+  constructor(props){
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      confirmPassword: '',
+      verificationCode: '',
+      currentPage: 0
+    }
   }
+  
 
   validEmail(address){
     return (

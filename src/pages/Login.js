@@ -92,11 +92,15 @@ const styles = theme => ({
 });
 
 class Login extends React.Component {
-  state = {
-    email: '',
-    password: '',
-    remember: true
+  constructor(props){
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      remember: true
+    }
   }
+  
   canLogIn(){
     return (
       this.validEmail(this.state.email) &&
