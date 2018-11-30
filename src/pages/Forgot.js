@@ -57,6 +57,7 @@ class ForgotPassword extends React.Component {
     email: '',
     password: '',
     confirmPassword: '',
+    verificationCode: '',
     currentPage: 0
   }
 
