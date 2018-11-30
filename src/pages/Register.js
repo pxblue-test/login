@@ -214,6 +214,7 @@ sendVerificationPhone(){
                       fullWidth={true}
                       inputProps={{maxLength: 256}}
                     />
+                    <Button color="primary">RESEND</Button>
                   </div>
                 </SidePanel>
               }
@@ -226,7 +227,6 @@ sendVerificationPhone(){
                   nextLabel={'FINISH'}
                   nextDisabled={!this.canSubmit()}
                 >
-                  {/* <div> */}
                     <Grid container alignItems="flex-end" className={classes.formGroup}>
                       <PersonIcon className={classes.icon}/>
                       <Grid item xs className={classes.formField}>
@@ -308,7 +308,6 @@ sendVerificationPhone(){
                       />
                       </Grid>
                     </Grid>
-                  {/* </div> */}
                 </SidePanel>
               }
             </Grid>
