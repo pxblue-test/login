@@ -9,9 +9,9 @@ import {changePassword as ChangePasswordAction,
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import TextField from '@material-ui/core/TextField';
-// import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-// import { Link } from "react-router-dom";
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import EmailIcon from '@material-ui/icons/Email';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
@@ -22,6 +22,10 @@ import ProductLogo from '../components/ProductLogo.js';
 const styles = theme => ({
   inputGroup:{
     marginTop: theme.spacing.unit*3
+  },
+  inputRow:{
+    display: 'flex',
+    alignItems: 'flex-end'
   },
   formField:{
     marginLeft: theme.spacing.unit*2,
@@ -106,7 +110,7 @@ class ForgotPassword extends React.Component {
             <Grid item xs={12} sm={6}>
             { this.state.currentPage === 0 &&
                 <SidePanel title={'Forgot Password'}
-                  info={`Enter your email address below and we will send you instructions for resetting the password for your account.`}
+                  info={`Enter your email address below and we will send you a verification code to authorize a password reset.`}
                   onBack={()=>this.props.history.goBack()}
                   backLabel={'BACK'}
                   onNext={()=>this.sendReset()}
@@ -142,6 +146,20 @@ class ForgotPassword extends React.Component {
                   nextDisabled={!this.canSubmit()}
                 >
                   <div className={classes.inputGroup}>
+                    <div className={classes.inputRow}>
+                    <TextField
+                      label="Verification Code"
+                      value={this.state.verificationCode}
+                      onChange={evt => this.setState({verificationCode: evt.target.value})}
+                      margin="none"
+                      required
+                      fullWidth={true}
+                      inputProps={{maxLength: 256}}
+                    />
+                    <Button color="primary">RESEND</Button>
+                    </div>
+                  </div>
+                  <div>
                     <Grid container alignItems="flex-end">
                       <VpnKeyIcon className={classes.icon}/>
                       <Grid item xs className={classes.formField}>
