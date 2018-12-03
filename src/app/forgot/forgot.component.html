@@ -20,7 +20,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="flex-center">
+          <div class="next-button1">
               <button mat-raised-button (click)="backtologin()">BACK</button> 
               <button [disabled]="!emailForm.valid" mat-raised-button color="primary" (click)="sendResetEmail()">Continue</button>
           </div>
@@ -31,13 +31,14 @@
         <p> Enter your new password below.</p>
         <form [formGroup]="passwordForm">
           <div class="form-field-set">
-            <div class="form-group">
+            <div class="form-group flex-center resend-group">
     
                <mat-form-field>
                 <input matInput type="text" placeholder="Verification Code"  required> 
               </mat-form-field>
                  <a color="primary"  class="resent-code">RESEND CODE</a>
-  
+            </div>
+            <div class="form-group flex-center">
               <mat-icon>vpn_key</mat-icon>
               <mat-form-field>
                 <input matInput type="password" placeholder="Password" formControlName="password" required>
