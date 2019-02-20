@@ -13,14 +13,14 @@
         <p>Enter your email address below and we will send you a verification code to authorize a password reset.</p>
         <form [formGroup]="emailForm">
           <div class="form-field-set">
-            <div class="form-group" flex align-center>
+            <div class="form-group" fxLayout="row" fxLayoutAlign="flex-start center">
               <mat-icon>email </mat-icon>
               <mat-form-field>
                 <input matInput placeholder="Email Address" formControlName="email" type="email" required>
               </mat-form-field>
             </div>
           </div>
-          <div class="next-button1">
+          <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
               <button mat-raised-button (click)="backtologin()">BACK</button> 
               <button [disabled]="!emailForm.valid" mat-raised-button color="primary" (click)="sendResetEmail()">Continue</button>
           </div>
@@ -31,24 +31,24 @@
         <p> Enter your new password below.</p>
         <form [formGroup]="passwordForm">
           <div class="form-field-set">
-            <div class="form-group flex-center resend-group">
+            <div class="form-group resend-group" fxLayout="row" fxLayoutAlign.sm="flex-start center" fxLayout.xs="column">
     
-               <mat-form-field>
+               <mat-form-field fxFlex="1 1 0">
                 <input matInput type="text" placeholder="Verification Code"  required> 
               </mat-form-field>
                  <a color="primary"  class="resent-code">RESEND CODE</a>
             </div>
-            <div class="form-group flex-center">
+            <div class="form-group" fxLayout="row" fxLayoutAlign="flex-start center" fxLayout.xs="column">
               <mat-icon>vpn_key</mat-icon>
-              <mat-form-field>
+              <mat-form-field fxFlex="1 1 0">
                 <input matInput type="password" placeholder="Password" formControlName="password" required>
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field fxFlex="1 1 0">
                 <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword" required>
               </mat-form-field>
             </div>
           </div>
-          <div class="flex-center">
+          <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
             <button mat-raised-button (click)="backtologin()">CANCEL</button>
             <button [disabled]="!passwordForm.valid" mat-raised-button color="primary" (click)="changePassword()">Change Password</button>            
           </div>
