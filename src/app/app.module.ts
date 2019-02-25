@@ -20,6 +20,7 @@ import {ForgotPasswordComponent} from './forgot/forgot.component';
 import { appRoutes } from './app.routing';
 import { AuthGuard } from './guards/auth.guard';
 import { AppService } from './app.service';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { AppService } from './app.service';
 
   declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, ForgotPasswordComponent],
   bootstrap: [AppComponent],
-  providers: [MatIconRegistry, AppService, AuthGuard]
+  providers: [MatIconRegistry, AppService, AuthGuard, {provide: APP_BASE_HREF, useValue : '/'}]
 })
 export class AppModule {
 
