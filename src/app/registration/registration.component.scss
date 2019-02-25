@@ -62,13 +62,7 @@
     max-width: inherit;
   }
 }
-[align-center]{
-  align-items: center;
-}
 
-[align-center] {
-  align-items: center;
-}
 
 .form-group {
   mat-form-field {
@@ -124,9 +118,6 @@
   .form-field-set {
     min-height: inherit;
     padding: 10px 0 20px;
-    .flex-center {
-      display: block;
-    }
   }
   .already-have-account {
     margin-top: 0;
