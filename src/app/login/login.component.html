@@ -1,4 +1,4 @@
-<div class="page-wrap">
+<div class="page-wrap" fxLayout="row" fxLayoutAlign="center center" fxLayout="column">
 	<mat-card class="container">
 		<img src="https://image.ibb.co/nuN8Re/12.jpg" alt="Company or Product Logo" class="logo" />
 		<form [formGroup]="loginForm">
@@ -8,12 +8,12 @@
 			<mat-form-field>
 				<input matInput type="password" placeholder="Password" formControlName="password" required>
 			</mat-form-field>
-			<div class="text-center flex-center remember-me mat-typography">
+			<div class="text-center mat-typography" fxLayout="row" fxLayoutAlign="space-between center" fxLayout="row-reverse" fxLayout.xs="column">
 				<button [disabled]="!loginForm.valid" mat-raised-button color="primary" class="login" (click)="login()">LOG IN</button>
       	<mat-checkbox class="text-center mat-typography" formControlName="remember">Remember Me</mat-checkbox>
       </div>
 <br/>
-      <div class="flex-center" mat-typography>
+      <div fxLayout="row" fxLayoutAlign="center center" mat-typography>
 				<a mat-button (click)="signUp" routerLink="/registration" color="primary" href="">Sign Up</a>
         <a mat-button (click)= "Password" routerLink="/forgot"color="primary" href="">Forgot Password</a>
 			</div>
