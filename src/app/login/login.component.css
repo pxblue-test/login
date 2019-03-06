@@ -8,14 +8,6 @@ mat-form-field{
 .text-center{
   text-align: center;
 }
-.flex-center{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.remember-me{
-  flex-direction: row-reverse;
-}
 .logo{
   max-width: 250px;
   margin: auto;
@@ -23,11 +15,7 @@ mat-form-field{
   display: block;
 } 
 .page-wrap{
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
   background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%,#094d9c 100%);
   padding: 10px 0;
 }
@@ -36,28 +24,23 @@ mat-form-field{
   max-width: 600px;
   margin: auto;
   background: #fff;
-  padding: 20px;
   box-sizing: border-box;
   border-radius: 5px;
-}
-.links{
-  color:#4da3d4; 
-}
-.links:visited {
-  color: #4da3d4;
 }
 .badge-logo{
   width: 60px;
   margin: 0 auto 10px;
   display: block;
 }
-@media (max-width:600px){
-  .flex-center{
-    display: block;
-    text-align: center;
-  }
+@media (max-width:599px){
   .login{
-        width: 100%;
+        width: 100%; 
         margin-bottom: 15px;
   }
+}
+.links{
+  color:#4da3d4; 
+}
+.links:visited {
+  color: #4da3d4;
 }
