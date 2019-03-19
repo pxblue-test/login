@@ -3,18 +3,18 @@ jobs:
   build:
     working_directory: ~/login
     docker:
-      - image: cypress/base:8
+      - image: circleci/node:8.11-browsers
     steps:
       - checkout
       - restore_cache:
-          key: v#-dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install Dependencies
           command: yarn install
       - save_cache:
-          key: v#-dependency-cache-{{ checksum "package.json" }}
+          key: v1-dependency-cache-{{ checksum "package.json" }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache
             - ./node_modules
       - run:
           name: Build Angular
