@@ -1,0 +1,124 @@
+.page-block{
+  min-height: 100vh;
+}
+.sidebar-footer{
+  margin-top: 25%;
+}
+.sidebar-footer {
+
+    a{
+      color: #fff;
+    }
+  
+}
+.text-center{
+  text-align: center;
+}
+
+.resent-code{
+  color: #4da3d4;
+}
+.logo{
+  max-width: 220px;
+  margin: auto;
+  width: 100%;
+  display: block;
+} 
+.left-block{
+  color: #fff;
+  background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%,#094d9c 100%);
+  padding: 7% 0;
+}
+.right-block{
+  padding: 25px;
+  h4{
+    margin: 0 0 10px;
+    font-size: 20px;
+    color:#4da3d4; 
+  }
+  p{
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.badge-logo{
+  width: 60px;
+  margin: 0 auto 10px;
+  display: block;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+[align-center]{
+  align-items: center;
+}
+.form-group{
+  mat-form-field{
+    margin-left: 3%;
+  }
+}
+.resend-group{
+  mat-form-field{
+    margin: 0 20px 0 0;
+    width:100%;
+    max-width: inherit;
+  }
+}
+.next-button{
+  text-align: right;
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.form-field-set{
+  padding-top: 30px;
+  
+}
+.already-have-account{
+  margin-top: 20px;
+  .links{
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+}
+.links{
+  color:#4da3d4; 
+}
+.links:visited {
+  color: #4da3d4;
+}
+
+@media (max-width:767px){
+  .left-block{
+    display: none;
+  }
+}
+@media (max-width:599px){
+  .right-block{
+    padding: 15px;
+  }
+  .form-field-set{
+    min-height: inherit;
+    padding: 10px 0 20px;
+    .flex-center{
+      display: block;
+    }
+  }
+  .already-have-account{
+    margin-top: 0;
+  }
+  .form-group{
+    mat-icon{
+      display: none;
+    }
+    mat-form-field{
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+}

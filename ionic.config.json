@@ -1,0 +1,8 @@
+{
+  "name": "ionicMaterial",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
