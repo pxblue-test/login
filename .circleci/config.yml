@@ -17,9 +17,6 @@ jobs:
             - ~/.cache
             - ./node_modules
       - run:
-          name: Build Project
-          command: yarn build-project
-      - run:
           name: Run Test Cases
           command: yarn test --watch=false --no-progress
       
