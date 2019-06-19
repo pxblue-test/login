@@ -22,8 +22,10 @@ You can then run the example on web browser :
 ```
 ionic serve
 ```
-If you want to run the example in simulator. Firstly you need to build the code and open the project in xcode and run simulator
+If you want to run the example in simulator. Firstly you need to add the platforms and build the code 
+Open the project in xcode and run the simulator
 ```
+ionic cordova add platforms ios
 ionic cordova build ios
 ionic cordova build android
 ```
