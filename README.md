@@ -5,7 +5,7 @@
 This is a sample application showing how to build a basic login page with authentication and route blocking.
 
 ## Running the example
-To run this example, first clone the repository. Each of our example projects comes with a branch for Angular, React and a branch for Ionic. You can choose which branch to use when you clone the repository (or you can switch after cloning as well):
+To run this example, first clone the repository. Each of our example projects comes with a branch for each supported framework. You can choose which branch to use when you clone the repository (or you can switch after cloning as well):
 
 ```
 git clone https://github.com/pxblue/login -b ionic
@@ -18,14 +18,20 @@ cd login
 yarn
 ```
 
-You can then run the example on web browser :
+You can then run the example using a web browser using the command:
 ```
 ionic serve
 ```
-If you want to run the example in simulator. Firstly you need to add the platforms and build the code 
-Open the project in xcode and run the simulator
+In order to run the application on a device simulator, first add the platforms:
 ```
-ionic cordova add platforms ios
+ionic cordova platform add ios
+ionic cordova platform add android
+```
+
+Then, build the platform code:
+```
 ionic cordova build ios
 ionic cordova build android
 ```
+
+Then you can open the resulting project folder in Xcode or Android Studio to run the applciation on the simulator.
