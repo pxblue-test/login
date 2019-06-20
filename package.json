@@ -1,8 +1,8 @@
 {
-  "name": "ionicMaterial",
+  "name": "pxblue-login-ionic",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "PXBlue",
+  "homepage": "https://github.com/pxblue/login.git",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
