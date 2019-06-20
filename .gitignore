@@ -12,6 +12,10 @@ log.txt
 .vscode/
 npm-debug.log*
 
+# dependencies
+/node_modules
+package-lock.json
+
 .idea/
 .ionic/
 .sourcemaps/
@@ -20,7 +24,6 @@ npm-debug.log*
 .versions/
 coverage/
 www/
-node_modules/
 tmp/
 temp/
 platforms/
