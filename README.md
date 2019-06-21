@@ -34,4 +34,11 @@ ionic cordova build ios
 ionic cordova build android
 ```
 
-Then you can open the resulting project folder in Xcode or Android Studio to run the applciation on the simulator.
+Once the platform code has been built, you can run the example in the simulator directly from the command line:
+```
+ionic cordova run ios
+ionic cordova run android
+```
+> If you are using the latest version of Xcode, you may have to use an additional flag for the iOS app to properly run on the simulator: ```ionic cordova run ios --buildFlag="-UseModernBuildSystem=0"```
+
+> Avoid opening the Android project in Android Studio as it can cause issues with Gradle versions being out of sync with Ionic.
