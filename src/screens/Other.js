@@ -5,6 +5,7 @@ import {
     View,
 } from 'react-native';
 import { Header } from 'react-native-elements';
+import { ROUTES } from '../constants/routes';
 
 class Other extends React.Component {
     render() {
@@ -26,7 +27,7 @@ class Other extends React.Component {
     }
     _signOutAsync = async () => {
         await AsyncStorage.clear();
-        this.props.navigation.navigate('Auth');
+        this.props.navigation.navigate(ROUTES.AUTH);
     };
 }
 export default Other;
