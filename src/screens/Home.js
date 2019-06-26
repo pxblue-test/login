@@ -5,6 +5,8 @@ import {
   View,
 } from 'react-native';
 import { Header } from 'react-native-elements';
+import { ROUTES } from '../constants/routes';
+
 
 class Home extends React.Component {
   render() {
@@ -19,7 +21,7 @@ class Home extends React.Component {
           leftComponent={{ icon: 'menu', color: '#fff' }}
           centerComponent={{ text: 'Main Application', style: { color: 'white' } }}
         />
-        <Button title="OTHER PAGE" onPress={() => navigation.navigate('Other')} />
+        <Button title="OTHER PAGE" onPress={() => navigation.navigate(ROUTES.OTHER)} />
         <Button title="SIGN OUT" onPress={this._signOutAsync} />
       </View>
     );
@@ -27,7 +29,7 @@ class Home extends React.Component {
 
   _signOutAsync = async () => {
     await AsyncStorage.clear();
-    this.props.navigation.navigate('Auth');
+    this.props.navigation.navigate(ROUTES.AUTH);
   };
 }
 export default Home;

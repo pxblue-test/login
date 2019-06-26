@@ -4,6 +4,7 @@ import {
     Button,
     View,
   } from 'react-native';
+  import { ROUTES } from '../constants/routes';
 
 class SignIn extends React.Component {
     render() {
@@ -11,15 +12,15 @@ class SignIn extends React.Component {
         return (
             <View style={{height: '100%', justifyContent: 'center', backgroundColor: '#007bc1'}}>
                 <Button title="Sign in!" onPress={this._signInAsync} color="white" />
-                <Button title="Register" onPress={()=>navigation.push('Register')} color="white"  />
-                <Button title="Forgot Password" onPress={()=>navigation.push('Forgot')} color="white"  />
+                <Button title="Register" onPress={()=>navigation.push(ROUTES.REGISTER)} color="white"  />
+                <Button title="Forgot Password" onPress={()=>navigation.push(ROUTES.FORGOT)} color="white"  />
             </View>
         );
     }
 
     _signInAsync = async () => {
         await AsyncStorage.setItem('userToken', 'abc');
-        this.props.navigation.navigate('App');
+        this.props.navigation.navigate(ROUTES.APP);
     };
 }
 

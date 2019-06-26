@@ -5,6 +5,7 @@ import {
 } from 'react-navigation';
 
 // Import the different pages for the application
+import { ROUTES } from '../constants/routes';
 
 // Main Pages
 import HomeScreen from '../screens/Home';
@@ -14,28 +15,29 @@ import OtherScreen from '../screens/Other';
 import AuthLoadingScreen from '../screens/AuthLoading';
 import SignInScreen from '../screens/SignIn';
 import RegisterScreen from '../screens/Register';
-import ForgotScreen from '../screens/Forgot';
+import ForgotScreen, { ResetPassword as ResetPasswordScreen} from '../screens/Forgot';
 
 // Application Navigator
 const AppStack = createStackNavigator({ 
-    Home: HomeScreen, 
-    Other: OtherScreen 
-},{initialRouteName: 'Home', headerMode: 'none'});
+    [ROUTES.HOME]: HomeScreen, 
+    [ROUTES.OTHER]: OtherScreen 
+},{initialRouteName: ROUTES.HOME, headerMode: 'none'});
 
 // Authorization Navigator
 const AuthStack = createStackNavigator({ 
-    SignIn: SignInScreen, 
-    Register: RegisterScreen, 
-    Forgot: ForgotScreen 
-},{initialRouteName: 'SignIn', headerMode: 'none'});
+    [ROUTES.SIGN_IN]: SignInScreen, 
+    [ROUTES.REGISTER]: RegisterScreen, 
+    [ROUTES.FORGOT]: ForgotScreen,
+    [ROUTES.RESET_PASSWORD]: ResetPasswordScreen
+},{initialRouteName: ROUTES.SIGN_IN, headerMode: 'none'});
 
 export default createAppContainer(createSwitchNavigator(
   {
-    AuthLoading: AuthLoadingScreen,
-    App: AppStack,
-    Auth: AuthStack,
+    [ROUTES.AUTH_LOADING]: AuthLoadingScreen,
+    [ROUTES.APP]: AppStack,
+    [ROUTES.AUTH]: AuthStack,
   },
   {
-    initialRouteName: 'AuthLoading',
+    initialRouteName: ROUTES.AUTH_LOADING,
   }
 ));
