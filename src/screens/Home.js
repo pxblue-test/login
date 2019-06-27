@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   AsyncStorage,
-  Button,
   View,
 } from 'react-native';
 import { Header } from 'react-native-elements';
 import { ROUTES } from '../constants/routes';
+import Button from '../components/MatButton';
 
 
 class Home extends React.Component {

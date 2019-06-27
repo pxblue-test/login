@@ -1,7 +1,9 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { Input } from 'react-native-elements';
+import * as Colors from '@pxblue/colors';
 
-class MatTextfield extends React.Component {
+export default class MatTextfield extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,7 +30,23 @@ class MatTextfield extends React.Component {
             <Input
                 {...props}
                 label={focused || props.value.length > 0 ? label : ' '}
-                containerStyle={{ paddingHorizontal: 0, ...props.containerStyle }}
+                containerStyle={[styles.container, props.containerStyle]}
+                inputContainerStyle={[
+                    styles.inputContainer,
+                    (props.errorMessage && props.errorMessage.trim() !== '' ? styles.errorLine : props.value ? styles.blueLine : {})
+                ]} 
+                labelStyle={[
+                    styles.label, 
+                    (props.errorMessage && props.errorMessage.trim() !== '' ? styles.error : props.value ? styles.blue : {}), 
+                    props.labelStyle]}
+                inputStyle={[
+                    styles.input,
+                    (props.errorMessage && props.errorMessage.trim() !== '' ? styles.error : {}), 
+                    props.inputStyle
+                ]}
+                errorStyle={[styles.errorMessage, props.errorStyle]}
+                underlineColorAndroid={'transparent'}
+                underlineColorIos={'transparent'}
                 placeholder={!focused ? label : ''}
                 onFocus={(evt) => this._onFocus(evt)}
                 onBlur={(evt) => this._onBlur(evt)}
@@ -36,4 +54,36 @@ class MatTextfield extends React.Component {
         );
     }
 }
-export default MatTextfield;
+
+const styles = StyleSheet.create({
+    container: {
+      paddingHorizontal: 0,
+    },
+    label:{
+        color: Colors.black['500'],
+        fontWeight: '400'
+    },
+    inputContainer:{
+        borderBottomWidth: 1,
+        borderBottomColor: Colors.black['500']
+    },
+    input:{
+        fontSize: 16
+    },
+    error:{
+        color: Colors.red['500']
+    },  
+    errorLine:{
+        borderBottomColor: Colors.red['500'],
+    },
+    blue:{
+        color: Colors.blue['500']
+    },
+    blueLine:{
+        borderBottomColor: Colors.blue['500']
+    },
+    errorMessage:{
+        color: Colors.red['500'],
+        marginHorizontal: 0,
+    }
+  });
