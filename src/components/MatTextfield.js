@@ -46,7 +46,6 @@ export default class MatTextfield extends React.Component {
                 ]}
                 errorStyle={[styles.errorMessage, props.errorStyle]}
                 underlineColorAndroid={'transparent'}
-                underlineColorIos={'transparent'}
                 placeholder={!focused ? label : ''}
                 onFocus={(evt) => this._onFocus(evt)}
                 onBlur={(evt) => this._onBlur(evt)}

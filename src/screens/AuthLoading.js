@@ -1,10 +1,10 @@
 import React from 'react';
 import {
   ActivityIndicator,
-  AsyncStorage,
   StatusBar,
   View,
 } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { ROUTES } from '../constants/routes';
 
 

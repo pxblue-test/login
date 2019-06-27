@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Text Renders 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#424e54",
+        "fontSize": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  Here is a sample text
+</Text>
+`;
+
+exports[`Typography Text Renders with custom styles 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#424e54",
+        "fontSize": 16,
+      },
+      Object {
+        "color": "green",
+        "fontSize": 24,
+      },
+    ]
+  }
+>
+  Here is a sample custom text
+</Text>
+`;

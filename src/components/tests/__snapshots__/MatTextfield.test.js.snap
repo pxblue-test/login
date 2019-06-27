@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Material Textfield Renders Complete 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 0,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#007bc1",
+        "fontSize": 16,
+        "fontWeight": "400",
+      }
+    }
+  >
+    Success
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "#007bc1",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Success"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 16,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+      value="VALID"
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#ca3c3d",
+        "fontSize": 12,
+        "margin": 5,
+        "marginHorizontal": 0,
+      }
+    }
+  >
+     
+  </Text>
+</View>
+`;
+
+exports[`Material Textfield Renders Error 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 0,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#ca3c3d",
+        "fontSize": 16,
+        "fontWeight": "400",
+      }
+    }
+  >
+    Error
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "#ca3c3d",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Error"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#ca3c3d",
+          "flex": 1,
+          "fontSize": 16,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+      value="INVALID"
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#ca3c3d",
+        "fontSize": 12,
+        "margin": 5,
+        "marginHorizontal": 0,
+      }
+    }
+  >
+    There was an error
+  </Text>
+</View>
+`;
+
+exports[`Material Textfield Renders Normal 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 0,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#424e54",
+        "fontSize": 16,
+        "fontWeight": "400",
+      }
+    }
+  >
+     
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "#424e54",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Sample"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 16,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#ca3c3d",
+        "fontSize": 12,
+        "margin": 5,
+        "marginHorizontal": 0,
+      }
+    }
+  >
+     
+  </Text>
+</View>
+`;
+
+exports[`Material Textfield Renders with Custom Styles 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+      "paddingHorizontal": 0,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#007bc1",
+        "fontSize": 20,
+        "fontWeight": "400",
+      }
+    }
+  >
+    Sample
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "#007bc1",
+        "borderBottomWidth": 1,
+        "borderColor": "#86939e",
+        "flexDirection": "row",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Sample"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "green",
+          "color": "black",
+          "flex": 1,
+          "fontSize": 16,
+          "minHeight": 40,
+        }
+      }
+      testID="RNE__Input__text-input"
+      underlineColorAndroid="transparent"
+      value="sample"
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "purple",
+        "fontSize": 12,
+        "margin": 5,
+        "marginHorizontal": 0,
+      }
+    }
+  >
+     
+  </Text>
+</View>
+`;

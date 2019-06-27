@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Material Button Tests (Default) Clear Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#727e84",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Default) Outline Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#727e84",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#727e84",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Default) Solid Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#727e84",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Primary) Clear Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#007bc1",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Primary) Outline Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#007bc1",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#007bc1",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Primary) Solid Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#007bc1",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Secondary) Clear Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#0088f2",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Secondary) Outline Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#0088f2",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#0088f2",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Material Button Tests (Secondary) Solid Renders 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#0088f2",
+          "borderColor": "#2089dc",
+          "borderRadius": 3,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 18,
+            "paddingBottom": 1,
+            "paddingTop": 2,
+            "textAlign": "center",
+          }
+        }
+      >
+        TEST
+      </Text>
+    </View>
+  </View>
+</View>
+`;
