@@ -1,8 +1,9 @@
 import React from 'react';
 import {
+    AsyncStorage,
     View,
   } from 'react-native';
-  import AsyncStorage from '@react-native-community/async-storage';
+//   import AsyncStorage from '@react-native-community/async-storage';
 
   import { ROUTES } from '../constants/routes';
   import Button from '../components/MatButton';
