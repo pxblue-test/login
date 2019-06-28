@@ -2,23 +2,23 @@ import { StyleSheet } from "react-native";
 import * as Colors from '@pxblue/colors';
 
 export default StyleSheet.create({
-    background: {
-        width: "100%",
-        height: "100%",
+  background: {
+    width: "100%",
+    height: "100%",
 
-    },
+  },
   card: {
     height: "65%",
     width: "100%",
     alignItems: "center",
     marginRight: 100,
-    
+
   },
   mainContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    
+
   },
   logo: {
     width: 200,
@@ -32,24 +32,24 @@ export default StyleSheet.create({
     alignSelf: "center",
     resizeMode: "contain"
   },
-  
-    
-    emailAddressAndPassword: {
-        flex: 1,
-        justifyContent: "space-between",
-        flexDirection: "column",
-        margin: "-1px 0px 0px",
-        padding: "7px 0px"
-      },
-      emailAddress: {
-        color: "blue"
-      },
-      Password: {
-        color: "blue"
-      },
-      
-    
-  
+
+
+  emailAddressAndPassword: {
+    flex: 1,
+    justifyContent: "space-between",
+    flexDirection: "column",
+    margin: "-1px 0px 0px",
+    padding: "7px 0px"
+  },
+  emailAddress: {
+    color: "blue"
+  },
+  Password: {
+    color: "blue"
+  },
+
+
+
   footer: {
     flex: 1,
     justifyContent: "space-between",
@@ -60,10 +60,10 @@ export default StyleSheet.create({
   },
 
   rememberMe: {
-      alignSelf: "center",
-      fontSize: 20      
+    alignSelf: "center",
+    fontSize: 20
   },
-  
+
   signUpAndPassword: {
     flex: 1,
     justifyContent: "space-evenly",
@@ -84,13 +84,13 @@ export default StyleSheet.create({
   link: {
     color: Colors.blue['500'],
   },
-  registrationPage : {
-    flex: 1,    
+  registrationPage: {
+    flex: 1,
   },
   heading: {
-      fontSize: 20,
-      color: '#4da3d4',
-      fontWeight: '700',
-      marginBottom: 20,
+    fontSize: 20,
+    color: '#4da3d4',
+    fontWeight: '700',
+    marginBottom: 20,
   }
 });

@@ -17,8 +17,7 @@ import styles from "../styles";
 //   import AsyncStorage from '@react-native-community/async-storage';
 import Button from '../components/MatButton';
 import * as Colors from '@pxblue/colors';
-
-const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+import { EMAIL_REGEX } from '../constants/index';
 
 class SignIn extends React.Component {
     constructor(props) {
@@ -70,13 +69,13 @@ class SignIn extends React.Component {
                         />
                         <View style={styles.signUpAndPassword}>
                             <Button
-                                type={'clear'}
+                                type={'solid'}
                                 title="Sign Up"
                                 onPress={()=>navigation.push(ROUTES.REGISTER)}
                                 color={'primary'}
                             />
                             <Button 
-                                type={'clear'} 
+                                type={'solid'} 
                                 title="Forgot Password" 
                                 onPress={()=>navigation.push(ROUTES.FORGOT)} 
                                 color={'primary'}
