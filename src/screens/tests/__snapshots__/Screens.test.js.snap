@@ -1804,9 +1804,9 @@ exports[`Screens Render Correctly SignIn 1`] = `
       Object {
         "alignItems": "center",
         "flexGrow": 1,
-        "justifyContent": "stretch",
       }
     }
+    keyboardShouldPersistTaps="always"
     style={
       Object {
         "flex": 1,

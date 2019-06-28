@@ -40,7 +40,7 @@ class SignIn extends React.Component {
         const { email, password, canRemember } = this.state;
         return (
             <View style={{ flex: 1, backgroundColor: Colors.blue['500'] }}>
-                <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1, justifyContent: 'stretch', alignItems: 'center' }} keyboardShouldPersistTaps={'always'}>
+                <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }} keyboardShouldPersistTaps={'always'}>
                     <View style={{ flex: 1, justifyContent: 'center' }}>
                         <Card containerStyle={{ paddingHorizontal: 50 }}>
                             <View style={styles.logo_product}>
