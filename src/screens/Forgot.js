@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     View,
+    ScrollView,
     StyleSheet,
 } from 'react-native';
 import { Header } from 'react-native-elements';
@@ -8,9 +9,7 @@ import Input from '../components/MatTextfield';
 import Text from '../components/Typography';
 import Button from '../components/MatButton';
 import { ROUTES } from '../constants/routes';
-
-
-const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+import { EMAIL_REGEX } from '../constants/index';
 
 class Forgot extends React.Component {
     constructor(props) {
@@ -30,7 +29,7 @@ class Forgot extends React.Component {
         const { navigation } = this.props;
         const { email } = this.state;
         return (
-            <View style={{ color: 'red' }}>
+            <View style={{ flex: 1 }}>
                 <Header
                     containerStyle={{
                         backgroundColor: '#007bc1',
@@ -39,7 +38,7 @@ class Forgot extends React.Component {
                     centerComponent={{ text: 'Forgot Password', style: { color: 'white' } }}
                     leftComponent={{ text: 'Cancel', style: { color: 'white' }, onPress: () => navigation.popToTop() }}
                 />
-                <View style={{ padding: 20 }}>
+                <ScrollView style={{flex: 1}} contentContainerStyle={{padding: 20}} keyboardShouldPersistTaps={'always'}>
                     <Text style={{ marginBottom: 20 }}>Enter your email address below and we will send you a verification code to authorize a password reset.</Text>
                     <Input
                         label={'Email Address*'}
@@ -55,7 +54,7 @@ class Forgot extends React.Component {
                         onPress={() => this.sendReset(email)}
                         disabled={!email.match(EMAIL_REGEX)}
                     />
-                </View>
+                </ScrollView>
             </View>
         );
     }
@@ -94,7 +93,7 @@ export class ResetPassword extends React.Component {
         const { navigation } = this.props;
         const { code, password, confirm } = this.state;
         return (
-            <View>
+            <View style={{flex: 1}}>
                 <Header
                     containerStyle={{
                         backgroundColor: '#007bc1',
@@ -103,7 +102,7 @@ export class ResetPassword extends React.Component {
                     centerComponent={{ text: 'New Password', style: { color: 'white' } }}
                     leftComponent={{ text: 'Cancel', style: { color: 'white' }, onPress: () => navigation.popToTop() }}
                 />
-                <View style={{ padding: 20 }}>
+                <ScrollView style={{ flex: 1 }} contentContainerStyle={{padding: 20}} keyboardShouldPersistTaps={'always'}>
                     <Text style={{ marginBottom: 20 }}>Enter your new password below.</Text>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Input
@@ -143,7 +142,7 @@ export class ResetPassword extends React.Component {
                         disabled={!this._canReset()}
                         style={{ marginBottom: 20 }}
                     />
-                </View>
+                </ScrollView>
             </View>
         );
     }

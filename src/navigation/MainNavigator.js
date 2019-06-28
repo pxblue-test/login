@@ -14,7 +14,7 @@ import OtherScreen from '../screens/Other';
 // Authorization workflow pages
 import AuthLoadingScreen from '../screens/AuthLoading';
 import SignInScreen from '../screens/SignIn';
-import RegisterScreen from '../screens/Register';
+import RegisterScreen, { Verify as VerifyScreen, CreateAccount as CreateAccountScreen } from '../screens/Register';
 import ForgotScreen, { ResetPassword as ResetPasswordScreen} from '../screens/Forgot';
 
 // Application Navigator
@@ -27,6 +27,8 @@ const AppStack = createStackNavigator({
 const AuthStack = createStackNavigator({ 
     [ROUTES.SIGN_IN]: SignInScreen, 
     [ROUTES.REGISTER]: RegisterScreen, 
+    [ROUTES.VERIFY]: VerifyScreen,
+    [ROUTES.CREATE_ACCOUNT]: CreateAccountScreen,
     [ROUTES.FORGOT]: ForgotScreen,
     [ROUTES.RESET_PASSWORD]: ResetPasswordScreen
 },{initialRouteName: ROUTES.SIGN_IN, headerMode: 'none'});

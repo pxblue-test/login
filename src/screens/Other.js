@@ -1,9 +1,9 @@
 import React from 'react';
 import {
     AsyncStorage,
-    Button,
     View,
 } from 'react-native';
+import Button from '../components/MatButton';
 // import AsyncStorage from '@react-native-community/async-storage';
 
 import { Header } from 'react-native-elements';
@@ -22,8 +22,9 @@ class Other extends React.Component {
                     leftComponent={{ icon: 'menu', color: '#fff' }}
                     centerComponent={{ text: 'Other Page', style: { color: 'white' } }}
                 />
-                <Button title="HOME PAGE" onPress={() => navigation.pop()} />
-                <Button title="SIGN OUT" onPress={this._signOutAsync} />
+                <Button containerStyle={{marginHorizontal: 20, marginVertical: 20}} color={'primary'} type={'outline'} title="HOME PAGE" onPress={() => navigation.pop()} />
+                <Button containerStyle={{marginHorizontal: 20}} color={'primary'} type={'solid'} title="SIGN OUT" onPress={this._signOutAsync} />
+
             </View>
         );
     }
