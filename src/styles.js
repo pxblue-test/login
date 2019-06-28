@@ -1,17 +1,17 @@
 import { StyleSheet } from "react-native";
-import { blue } from "ansi-colors";
+import * as Colors from '@pxblue/colors';
 
 export default StyleSheet.create({
     background: {
         width: "100%",
         height: "100%",
-        
-        
+
     },
   card: {
-    height: "70%",
-    width: "90%",
+    height: "65%",
+    width: "100%",
     alignItems: "center",
+    marginRight: 100,
     
   },
   mainContainer: {
@@ -82,7 +82,7 @@ export default StyleSheet.create({
     textAlign: "center"
   },
   link: {
-    color: 'blue',
+    color: Colors.blue['500'],
   },
   registrationPage : {
     flex: 1,    
@@ -90,6 +90,7 @@ export default StyleSheet.create({
   heading: {
       fontSize: 20,
       color: '#4da3d4',
-      fontWeight: '700'
+      fontWeight: '700',
+      marginBottom: 20,
   }
 });
