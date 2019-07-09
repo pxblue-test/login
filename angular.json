@@ -35,6 +35,12 @@
              
               {
                 "input": "src/global.scss"
+              },
+              {
+                "input": "./node_modules/@pxblue/themes/angular/theme.scss"
+              },
+              {
+                "input": "./node_modules/typeface-open-sans"
               }
             ],
             "scripts": [],
