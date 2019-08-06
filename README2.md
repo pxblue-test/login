@@ -1,65 +1,64 @@
 # Login component example
-This project demonstrates how to build a basic login page with authentication, route blocking, forgot password and registration workflows.
+This project demonstrates how to build a basic login page with authentication, route blocking, forgot password and registration workflows for web and mobile.
 
 | Framework           | Status       | Live Examples  |
 | ---------------- |--------------|------------------|
 | Angular | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/angular) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-login-angular)
 | React | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-login-react)
-| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/ionic) | [View on Stackblitz]()
+| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/ionic) | [View on Stackblitz](https://stackblitz.com/@px-blue)
 | React Native | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/reactnative) | [View on Snack](https://snack.expo.io/@px-blue/empty-states-reactnative)
 
-# Angular Example
-## Running Angular or React examples
-Clone the repository.
+# Angular Framework Example
+## Running the Angular example locally
+To run this example, first clone the repository.
 ```
-git clone https://github.com/pxblue/[repository-name] -b [angular or react]
+git clone https://github.com/pxblue/login -b angular
 ```
 Navigate to the project directory and install the necessary dependencies then run the project:
 
 ```
-cd <project>
+cd login
 yarn
-```
-```
 yarn start
 ```
 
-All of our code examples can also be found on [Stackblitz](http://www.stackblitz.com/@px-blue), which allows you to make changes to a project and see the updates to the rendered application in real-time.
-
 For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular) or our [React Guide](https://pxblue.github.io/development/frameworks-web/react)
 
-# Ionic Examples
-## Running Ionic examples
-Clone the repository.
+# React Framework Example
+## Running the React example locally
+To run this example, first clone the repository.
 ```
-git clone https://github.com/pxblue/[repository-name] -b ionic
+git clone https://github.com/pxblue/login -b react
+```
+Navigate to the project directory and install the necessary dependencies then run the project:
+
+```
+cd login
+yarn
+yarn start
+```
+
+For additional information read our [React Guide](https://pxblue.github.io/development/frameworks-web/react)
+
+# Ionic Framework Example
+## Running the Ionic example locally
+To run this example, first clone the repository.
+```
+git clone https://github.com/pxblue/login -b ionic
 ```
 
 Navigate to the project directory and install the necessary dependencies then run the project:
 
 ```
-cd <project>
+cd login
 yarn
-```
-```
 ionic serve
 ```
-In order to run the application on a device simulator, first add the platforms:
+To run on a device, add the platform then build the project and run:
 ```
-ionic cordova platform add ios
-ionic cordova platform add android
-```
-
-Then, build the platform code:
-```
-ionic cordova build ios
-ionic cordova build android
-```
-
-Once the platform code has been built, you can run the example in the simulator directly from the command line:
-```
-ionic cordova run ios
-ionic cordova run android
+ionic cordova platform add android | ios
+ionic cordova build android | ios
+ionic cordova run android | ios
 ```
 For additional information read our [Ionic Guide](https://pxblue.github.io/development/frameworks-mobile/ionic)
 
@@ -67,12 +66,12 @@ For additional information read our [Ionic Guide](https://pxblue.github.io/devel
 
 > Avoid opening the Android project in Android Studio as it can cause issues with Gradle versions being out of sync with Ionic.
 
-# React-Native Examples
-## Running React Native Examples
-Clone the repository.
+# React Native Example
+## Running React Native Example locally
+To run this example, first clone the repository.
 
 ```
-git clone https://github.com/pxblue/[repository-name] -b reactnative
+git clone https://github.com/pxblue/login -b reactnative
 ```
 
 Navigate to the project directory and install the necessary dependencies then run the project.
@@ -80,8 +79,6 @@ Navigate to the project directory and install the necessary dependencies then ru
 ```
 cd <project>
 yarn
-```
-```
 yarn start
 ```
 
@@ -89,4 +86,4 @@ This will present you with several options for testing the application (such as 
 
 For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native)
 
-All of our React Native code examples can be found on [Expo-Snack](https://expo.io/snacks/@px-blue)
+All of our live React Native code examples can be found on [Expo-Snack](https://expo.io/snacks/@px-blue)
