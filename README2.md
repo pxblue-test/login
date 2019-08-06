@@ -59,7 +59,7 @@ For additional information read our [Ionic Guide](https://pxblue.github.io/devel
 
 # React-Native Examples
 ## Running React Native Examples
-To run this example, first clone the repository. Each of our example projects comes with a branch for each supported framework. You can choose which branch to use when you clone the repository (or you can switch after cloning as well):
+Clone the repository.
 
 ```
 git clone https://github.com/pxblue/[repository-name] -b reactnative
