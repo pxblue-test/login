@@ -54,7 +54,7 @@ cd login
 yarn
 ionic serve
 ```
-To run on a device, add the platform then build the project and run:
+To run on a device, add the platform then build and run the project:
 ```
 ionic cordova platform add android | ios
 ionic cordova build android | ios
