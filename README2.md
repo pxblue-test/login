@@ -1,4 +1,4 @@
-#PX Blue Login component example
+# PX Blue Login component example
 This project demonstrates how to build a basic login page with authentication, route blocking, forgot password and registration workflows for web and mobile.
 
 | Framework           | Status       | Live Examples  |
