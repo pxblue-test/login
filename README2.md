@@ -86,4 +86,4 @@ This will present you with several options for testing the application (such as 
 
 For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native)
 
-All of our live React Native code examples can be found on [Expo-Snack](https://expo.io/snacks/@px-blue)
+All of our live React Native code examples can be found on [Snack](https://expo.io/snacks/@px-blue)
