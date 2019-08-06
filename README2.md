@@ -28,7 +28,7 @@ git clone https://github.com/pxblue/[repository-name] -b ionic
 Navigate to the project directory and install the necessary dependencies then run the project:
 
 ```
-cd login
+cd <project>
 yarn
 ```
 ```
@@ -68,7 +68,7 @@ git clone https://github.com/pxblue/[repository-name] -b reactnative
 Navigate to the project directory and install the necessary dependencies then run the project.
 
 ```
-cd login
+cd <project>
 yarn
 ```
 ```
