@@ -22,7 +22,7 @@ yarn
 yarn start
 ```
 
-For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular)
+For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
 # React Framework Example
 ## Running the React example locally
@@ -38,7 +38,7 @@ yarn
 yarn start
 ```
 
-For additional information read our [React Guide](https://pxblue.github.io/development/frameworks-web/react)
+For additional information read our [React Guide](https://pxblue.github.io/development/frameworks-web/react) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
 # Ionic Framework Example
 ## Running the Ionic example locally
@@ -60,7 +60,7 @@ ionic cordova platform add android | ios
 ionic cordova build android | ios
 ionic cordova run android | ios
 ```
-For additional information read our [Ionic Guide](https://pxblue.github.io/development/frameworks-mobile/ionic)
+For additional information read our [Ionic Guide](https://pxblue.github.io/development/frameworks-mobile/ionic) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
 > If you are using the latest version of Xcode, you may have to use an additional flag for the iOS app to properly run on the simulator: ```ionic cordova run ios --buildFlag="-UseModernBuildSystem=0"```
 
@@ -84,6 +84,6 @@ yarn start
 
 This will present you with several options for testing the application (such as using a local simulator or connected device). Using a local simulator is the simplest option and avoids the hassle of getting your computer and test device connected to the same network, configuring proxies etc.
 
-For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native)
+For additional information read our [React Native Guide](https://pxblue.github.io/development/frameworks-mobile/react-native) and our [Environment Setup](https://pxblue.github.io/development/environment)
 
 All of our live React Native code examples can be found on [Snack](https://expo.io/snacks/@px-blue)
