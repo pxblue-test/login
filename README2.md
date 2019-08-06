@@ -22,7 +22,7 @@ yarn
 yarn start
 ```
 
-For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular) or our [React Guide](https://pxblue.github.io/development/frameworks-web/react)
+For additional information read our [Angular Guide](https://pxblue.github.io/development/frameworks-web/angular)
 
 # React Framework Example
 ## Running the React example locally
