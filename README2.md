@@ -67,7 +67,7 @@ For additional information read our [Ionic Guide](https://pxblue.github.io/devel
 > Avoid opening the Android project in Android Studio as it can cause issues with Gradle versions being out of sync with Ionic.
 
 # React Native Example
-## Running React Native Example locally
+## Running React Native example locally
 To run this example, first clone the repository.
 
 ```
