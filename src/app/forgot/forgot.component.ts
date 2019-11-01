@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup, FormControl, Validators, AbstractControl} from '@angular/forms';
+import {AbstractControl,FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 import { RegistrationComponent } from '../registration/registration.component';
@@ -12,11 +12,11 @@ import { RegistrationComponent } from '../registration/registration.component';
   styleUrls: ['../registration/registration.component.scss']
 })
 export class ForgotPasswordComponent implements OnInit {
-  emailForm:FormGroup;
-  passwordForm:FormGroup;
-  showEmailForm:boolean = true;
-  showPasswordForm:boolean = false;
-  constructor(private fb:FormBuilder, private router:Router, private appService:AppService) { 
+  emailForm: FormGroup;
+  passwordForm: FormGroup;
+  showEmailForm = true;
+  showPasswordForm = false;
+  constructor(private readonly fb: FormBuilder, private readonly router: Router, private readonly appService: AppService) { 
     
   }
 

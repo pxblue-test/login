@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup, FormControl, Validators, AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn} from '@angular/forms';
+import {AbstractControl,FormBuilder, FormControl, FormGroup, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
@@ -11,13 +11,13 @@ import { AppService } from '../app.service';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit{
-  registrationForm:FormGroup;
-  verificationForm:FormGroup;
-  accountForm:FormGroup;
-  showRegisterForm:boolean = true;
-  showVerificationForm:boolean = false;
-  showAccountForm:boolean = false;
-  constructor(private fb:FormBuilder, private router:Router, private appService:AppService) { 
+  registrationForm: FormGroup;
+  verificationForm: FormGroup;
+  accountForm: FormGroup;
+  showRegisterForm = true;
+  showVerificationForm = false;
+  showAccountForm = false;
+  constructor(private readonly fb: FormBuilder, private readonly router: Router, private readonly appService: AppService) { 
     
   }
 

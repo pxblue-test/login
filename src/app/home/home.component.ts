@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class HomeComponent implements OnInit {
   username;
-  constructor(private router:Router, private appService:AppService) { }
+  constructor(private readonly router: Router, private readonly appService: AppService) { }
 
   ngOnInit() {
     

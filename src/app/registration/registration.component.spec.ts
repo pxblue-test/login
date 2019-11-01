@@ -1,5 +1,5 @@
 
-import { TestBed, fakeAsync, getTestBed, tick, async, ComponentFixture } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async, fakeAsync, getTestBed, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppModule } from "../app.module";
 import { RegistrationComponent } from './registration.component';
@@ -27,8 +27,8 @@ import {
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
-    MatSliderModule,
     MatSlideToggleModule,
+    MatSliderModule,
     MatSnackBarModule,
     MatStepperModule,
     MatTableModule,

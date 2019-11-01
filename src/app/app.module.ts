@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
@@ -8,16 +8,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
    MatButtonModule,
+   MatCardModule,
    MatCheckboxModule,
+   MatChipsModule,
    MatFormFieldModule,
    MatInputModule,
-   MatOptionModule,
+   MatListModule,
+   MatOptionModule, 
    MatSelectModule,
-   MatSlideToggleModule,
-   MatCardModule, 
-   MatChipsModule,
-   MatToolbarModule, 
-   MatListModule
+   MatSlideToggleModule, 
+   MatToolbarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';

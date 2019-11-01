@@ -17,7 +17,7 @@ export class AppService {
   login(email: string, password: string): Observable<boolean> {
 
 // if email is valid (matches regex) and password length > 0
-    let user= {
+    const user= {
       'email': email,
       'password': password
     }

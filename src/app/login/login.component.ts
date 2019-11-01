@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup, FormControl, Validators} from '@angular/forms';
+import {FormBuilder,FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
@@ -11,8 +11,8 @@ const EMAIL_REGEX =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm:FormGroup;
-  constructor(private fb:FormBuilder, private router:Router, private appService:AppService) { 
+  loginForm: FormGroup;
+  constructor(private readonly fb: FormBuilder, private readonly router: Router, private readonly appService: AppService) { 
     
   }
 
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 login(){
   this.appService.login(this.loginForm.controls.email.value, this.loginForm.controls.password.value)
   .subscribe(
-      matched => {
+      (matched) => {
         if (matched) {
           this.router.navigateByUrl('');
         } else {

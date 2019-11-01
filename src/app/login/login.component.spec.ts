@@ -1,5 +1,5 @@
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
-import { TestBed,getTestBed, async,fakeAsync,tick, ComponentFixture } from '@angular/core/testing';
+import { ComponentFixture,TestBed, async,fakeAsync,getTestBed, tick } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {Router} from "@angular/router";
 import { RouterTestingModule } from '@angular/router/testing';
@@ -26,8 +26,8 @@ import {
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
-  MatSliderModule,
   MatSlideToggleModule,
+  MatSliderModule,
   MatSnackBarModule,
   MatStepperModule,
   MatTableModule,
