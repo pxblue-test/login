@@ -4,12 +4,8 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
     beforeEach(async () => {
         TestBed.configureTestingModule({
-            imports: [
-                RouterTestingModule
-            ],
-            declarations: [ 
-                AppComponent
-            ],
+            imports: [RouterTestingModule],
+            declarations: [AppComponent],
         }).compileComponents();
     });
 
@@ -17,8 +13,5 @@ describe('AppComponent', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
-    })
+    });
 });
-
-
-

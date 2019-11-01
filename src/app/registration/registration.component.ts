@@ -1,104 +1,122 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl,FormBuilder, FormControl, FormGroup, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators} from '@angular/forms';
+import {
+    AbstractControl,
+    FormBuilder,
+    FormControl,
+    FormGroup,
+    NG_VALIDATORS,
+    ValidationErrors,
+    Validator,
+    ValidatorFn,
+    Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
- const EMAIL_REGEX =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 @Component({
-  selector: 'app-registration',
-  templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.scss']
+    selector: 'app-registration',
+    templateUrl: './registration.component.html',
+    styleUrls: ['./registration.component.scss'],
 })
-export class RegistrationComponent implements OnInit{
-  registrationForm: FormGroup;
-  verificationForm: FormGroup;
-  accountForm: FormGroup;
-  showRegisterForm = true;
-  showVerificationForm = false;
-  showAccountForm = false;
-  constructor(private readonly fb: FormBuilder, private readonly router: Router, private readonly appService: AppService) { 
-    
-  }
+export class RegistrationComponent implements OnInit {
+    registrationForm: FormGroup;
+    verificationForm: FormGroup;
+    accountForm: FormGroup;
+    showRegisterForm = true;
+    showVerificationForm = false;
+    showAccountForm = false;
+    constructor(
+        private readonly fb: FormBuilder,
+        private readonly router: Router,
+        private readonly appService: AppService,
+    ) {}
 
-  ngOnInit() {
-    this.registrationForm = this.fb.group({
-      email: ['', Validators.compose([Validators.required, Validators.email, Validators.pattern(EMAIL_REGEX)])]
-    });
+    ngOnInit() {
+        this.registrationForm = this.fb.group({
+            email: ['', Validators.compose([Validators.required, Validators.email, Validators.pattern(EMAIL_REGEX)])],
+        });
 
-    this.verificationForm = this.fb.group({
-      verificationCode: ['', Validators.compose([Validators.required])]
-    });
+        this.verificationForm = this.fb.group({
+            verificationCode: ['', Validators.compose([Validators.required])],
+        });
 
-    this.accountForm = this.fb.group({
-      firstName: ['', Validators.compose([Validators.required])],
-      lastName: ['', Validators.compose([Validators.required])],
-      role: [''],
-      phone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[0-9]*$')])],
-      password: ['', Validators.compose([Validators.required])],
-      confirmPassword: ['', Validators.compose([Validators.required])]
-    });
-    this.accountForm.validator = this.matchingPasswords;
-  }
-
-  matchingPasswords(AC: AbstractControl) {
-    if (AC.get('password') && AC.get('confirmPassword')) {
-      const password = AC.get('password').value;
-      const confirmPassword = AC.get('confirmPassword').value;
-      if (password !== confirmPassword) {
-        AC.get('confirmPassword').setErrors({matchingPasswords: true});
-      } else {
-        return null;
-      }
+        this.accountForm = this.fb.group({
+            firstName: ['', Validators.compose([Validators.required])],
+            lastName: ['', Validators.compose([Validators.required])],
+            role: [''],
+            phone: [
+                '',
+                Validators.compose([
+                    Validators.required,
+                    Validators.minLength(10),
+                    Validators.maxLength(10),
+                    Validators.pattern('^[0-9]*$'),
+                ]),
+            ],
+            password: ['', Validators.compose([Validators.required])],
+            confirmPassword: ['', Validators.compose([Validators.required])],
+        });
+        this.accountForm.validator = this.matchingPasswords;
     }
-  }
 
-  backtoRegister(){
-    this.showRegisterForm = true;
-    this.showVerificationForm = false;
-  }
+    matchingPasswords(AC: AbstractControl) {
+        if (AC.get('password') && AC.get('confirmPassword')) {
+            const password = AC.get('password').value;
+            const confirmPassword = AC.get('confirmPassword').value;
+            if (password !== confirmPassword) {
+                AC.get('confirmPassword').setErrors({ matchingPasswords: true });
+            } else {
+                return null;
+            }
+        }
+    }
 
-  sendEmailVerification() {
-    if(this.registrationForm.valid){
-      /*
+    backtoRegister() {
+        this.showRegisterForm = true;
+        this.showVerificationForm = false;
+    }
+
+    sendEmailVerification() {
+        if (this.registrationForm.valid) {
+            /*
         HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND A VERIFICATION EMAIL/CODE. 
         WE FAKE THIS (ASSUMING SUCCESS).
       */
-      this.showRegisterForm = false;
-      this.showVerificationForm = true;
+            this.showRegisterForm = false;
+            this.showVerificationForm = true;
+        }
     }
-  }
 
-  backtoVerification(){
-    this.showVerificationForm = true;
-    this.showAccountForm = false;
-  }
+    backtoVerification() {
+        this.showVerificationForm = true;
+        this.showAccountForm = false;
+    }
 
-  backtoLogin(){
-    this.router.navigateByUrl('login');
-  }
+    backtoLogin() {
+        this.router.navigateByUrl('login');
+    }
 
-  verifyEmail(){
-    /*
+    verifyEmail() {
+        /*
       HERE YOU NEED TO MAKE A CALL TO YOUR API TO CHECK THE VERIFICATION CODE. 
       WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
       IN YOUR APPLICATION.
     */
-    this.showVerificationForm = false;
-    this.showAccountForm = true;
-  }
-// creates the user account and redirects to login page
-  createAccount(){
-    if(this.accountForm.valid){
-      /*
+        this.showVerificationForm = false;
+        this.showAccountForm = true;
+    }
+    // creates the user account and redirects to login page
+    createAccount() {
+        if (this.accountForm.valid) {
+            /*
         HERE YOU NEED TO MAKE A CALL TO YOUR API TO CREATE THE NEW USER ACCOUNT. 
         WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
         IN YOUR APPLICATION. YOU MAY ALSO WANT TO AUTOMATICALLY LOG THE NEW USER
         IN AND TAKE THEM TO THEIR PROFILE/HOMEPAGE.
       */
-      this.backtoLogin();
+            this.backtoLogin();
+        }
     }
-  }
-
-
 }

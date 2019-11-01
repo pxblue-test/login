@@ -364,6 +364,11 @@
     "@typescript-eslint/parser" ">= 2.3.2"
     eslint-config-prettier ">= 6.3.0"
 
+"@pxblue/prettier-config@^1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.0-alpha.1.tgz#3b8266eba54edadfa71d79ca6ad2618ab7efef09"
+  integrity sha512-sge2VH7KZKT7QtSQ7Vdt6u83QDOITdkA7QBMhb9l4k7SxdkQKIS1sPWvtCx/KyAjUeTXusxRgsFlBDN12MVZlQ==
+
 "@pxblue/themes@^2.0.0":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@pxblue/themes/-/themes-2.0.3.tgz#773f7f175f492ff82a624e35634f85265ff0460f"
@@ -5856,6 +5861,11 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prettier@^1.18.2:
+  version "1.18.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
+  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
