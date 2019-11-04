@@ -8,7 +8,7 @@
         "test": "ng test",
         "lint": "eslint \"src/**/**.ts\"",
         "lint:fix": "eslint \"src/**/**.ts\" --fix",
-        "prettier": "prettier \"src/**/*.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
+        "prettier": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
         "e2e": "ng e2e",
         "cy:run": "cypress run",
         "cypress:open": "cypress open",
