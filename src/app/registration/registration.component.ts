@@ -2,16 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {
     AbstractControl,
     FormBuilder,
-    FormControl,
     FormGroup,
-    NG_VALIDATORS,
-    ValidationErrors,
-    Validator,
-    ValidatorFn,
     Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AppService } from '../app.service';
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -30,10 +24,9 @@ export class RegistrationComponent implements OnInit {
     constructor(
         private readonly fb: FormBuilder,
         private readonly router: Router,
-        private readonly appService: AppService,
     ) {}
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.registrationForm = this.fb.group({
             email: ['', Validators.compose([Validators.required, Validators.email, Validators.pattern(EMAIL_REGEX)])],
         });
@@ -73,15 +66,15 @@ export class RegistrationComponent implements OnInit {
         }
     }
 
-    backtoRegister() {
+    backtoRegister(): void {
         this.showRegisterForm = true;
         this.showVerificationForm = false;
     }
 
-    sendEmailVerification() {
+    sendEmailVerification(): void {
         if (this.registrationForm.valid) {
             /*
-        HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND A VERIFICATION EMAIL/CODE. 
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND A VERIFICATION EMAIL/CODE.
         WE FAKE THIS (ASSUMING SUCCESS).
       */
             this.showRegisterForm = false;
@@ -89,30 +82,30 @@ export class RegistrationComponent implements OnInit {
         }
     }
 
-    backtoVerification() {
+    backtoVerification(): void {
         this.showVerificationForm = true;
         this.showAccountForm = false;
     }
 
-    backtoLogin() {
+    backtoLogin(): void {
         this.router.navigateByUrl('login');
     }
 
-    verifyEmail() {
+    verifyEmail(): void {
         /*
-      HERE YOU NEED TO MAKE A CALL TO YOUR API TO CHECK THE VERIFICATION CODE. 
-      WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
+      HERE YOU NEED TO MAKE A CALL TO YOUR API TO CHECK THE VERIFICATION CODE.
+      WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS
       IN YOUR APPLICATION.
     */
         this.showVerificationForm = false;
         this.showAccountForm = true;
     }
     // creates the user account and redirects to login page
-    createAccount() {
+    createAccount(): void {
         if (this.accountForm.valid) {
             /*
-        HERE YOU NEED TO MAKE A CALL TO YOUR API TO CREATE THE NEW USER ACCOUNT. 
-        WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS 
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO CREATE THE NEW USER ACCOUNT.
+        WE FAKE THIS (ASSUMING SUCCESS). YOU WILL NEED TO HANDLE ERROR CONDITIONS
         IN YOUR APPLICATION. YOU MAY ALSO WANT TO AUTOMATICALLY LOG THE NEW USER
         IN AND TAKE THEM TO THEIR PROFILE/HOMEPAGE.
       */

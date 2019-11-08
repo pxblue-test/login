@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     login() {
         this.appService
             .login(this.loginForm.controls.email.value, this.loginForm.controls.password.value)
-            .subscribe(matched => {
+            .subscribe((matched) => {
                 if (matched) {
                     this.router.navigateByUrl('');
                 } else {
