@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AppService } from '../app.service';
-import { RegistrationComponent } from '../registration/registration.component';
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -18,11 +16,10 @@ export class ForgotPasswordComponent implements OnInit {
     showPasswordForm = false;
     constructor(
         private readonly fb: FormBuilder,
-        private readonly router: Router,
-        private readonly appService: AppService,
+        private readonly router: Router
     ) {}
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.emailForm = this.fb.group({
             email: ['', Validators.compose([Validators.required, Validators.email, Validators.pattern(EMAIL_REGEX)])],
         });
@@ -47,7 +44,7 @@ export class ForgotPasswordComponent implements OnInit {
         }
     }
 
-    sendResetEmail() {
+    sendResetEmail(): void {
         if (this.emailForm.valid) {
             /*
         HERE YOU NEED TO MAKE A CALL TO YOUR API TO SEND AN EMAIL WITH PASSWORD
@@ -60,15 +57,15 @@ export class ForgotPasswordComponent implements OnInit {
         }
     }
 
-    backtologin() {
+    backtologin(): void {
         this.router.navigateByUrl('login');
     }
 
-    changePassword() {
+    changePassword(): void {
         if (this.passwordForm.valid) {
             /*
-        HERE YOU NEED TO MAKE A CALL TO YOUR API TO RESET THE USER'S PASSWORD. 
-        WE FAKE THIS BY ASSUMING SUCCESS AND NAVIGATE TO THE LOGIN PAGE. 
+        HERE YOU NEED TO MAKE A CALL TO YOUR API TO RESET THE USER'S PASSWORD.
+        WE FAKE THIS BY ASSUMING SUCCESS AND NAVIGATE TO THE LOGIN PAGE.
         YOU WILL NEED TO HANDLE DIFFERENT CASES HERE INCLUDING ERROR CONDITIONS.
       */
             this.router.navigateByUrl('login');

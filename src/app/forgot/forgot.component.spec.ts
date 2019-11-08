@@ -1,9 +1,8 @@
-import { ComponentFixture, TestBed, async, fakeAsync, getTestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppModule } from '../app.module';
 import { ForgotPasswordComponent } from './forgot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppService } from '../app.service';
 import {
     MatAutocompleteModule,
     MatButtonModule,
@@ -39,9 +38,8 @@ import {
 describe('ForgotPasswordComponent', () => {
     let component: ForgotPasswordComponent;
     let fixture: ComponentFixture<ForgotPasswordComponent>;
-    let appService: AppService;
 
-    beforeEach(async () => {
+    beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [
                 RouterTestingModule,

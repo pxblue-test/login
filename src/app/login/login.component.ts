@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 
@@ -18,28 +18,30 @@ export class LoginComponent implements OnInit {
         private readonly appService: AppService,
     ) {}
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.loginForm = this.fb.group({
             email: ['', Validators.compose([Validators.required, Validators.pattern(EMAIL_REGEX)])],
             password: ['', Validators.compose([Validators.required])],
             remember: [true],
         });
     }
-    Password() {
+
+    password(): void {
         this.router.navigateByUrl('forgot');
     }
-    signUp() {
+
+    signUp(): void {
         this.router.navigateByUrl('registration');
     }
 
-    login() {
+    login(): void {
         this.appService
             .login(this.loginForm.controls.email.value, this.loginForm.controls.password.value)
             .subscribe((matched) => {
                 if (matched) {
                     this.router.navigateByUrl('');
                 } else {
-                    alert('Enter valid Details');
+                    //alert('Enter valid Details');
                 }
             });
     }

@@ -1,8 +1,5 @@
-import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
-import { ComponentFixture, TestBed, async, fakeAsync, getTestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Router } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
     MatAutocompleteModule,
@@ -43,9 +40,8 @@ import { AppModule } from '../app.module';
 describe('LoginComponent', () => {
     let app: LoginComponent;
     let fixture: ComponentFixture<LoginComponent>;
-    let appService: AppService;
 
-    beforeEach(async(() => {
+    beforeEach((() => {
         TestBed.configureTestingModule({
             declarations: [],
             imports: [
@@ -91,7 +87,6 @@ describe('LoginComponent', () => {
                 fixture = TestBed.createComponent(LoginComponent);
                 app = fixture.debugElement.componentInstance;
                 app.ngOnInit();
-                appService = TestBed.get(AppService);
             });
     }));
 

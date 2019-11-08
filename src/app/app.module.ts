@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
@@ -27,7 +27,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { ForgotPasswordComponent } from './forgot/forgot.component';
 import { appRoutes } from './app.routing';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards';
 import { AppService } from './app.service';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -52,7 +52,6 @@ import { APP_BASE_HREF } from '@angular/common';
         FlexLayoutModule,
         RouterModule.forRoot(appRoutes),
     ],
-
     declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, ForgotPasswordComponent],
     bootstrap: [AppComponent],
     providers: [MatIconRegistry, AppService, AuthGuard, { provide: APP_BASE_HREF, useValue: '/' }],
