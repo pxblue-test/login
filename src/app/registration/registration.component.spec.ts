@@ -1,10 +1,8 @@
-
-import { TestBed, fakeAsync, getTestBed, tick, async, ComponentFixture } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppModule } from "../app.module";
+import { AppModule } from '../app.module';
 import { RegistrationComponent } from './registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppService } from '../app.service';
 import {
     MatAutocompleteModule,
     MatButtonModule,
@@ -27,8 +25,8 @@ import {
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
-    MatSliderModule,
     MatSlideToggleModule,
+    MatSliderModule,
     MatSnackBarModule,
     MatStepperModule,
     MatTableModule,
@@ -40,12 +38,12 @@ import {
 describe('RegistrationComponent', () => {
     let component: RegistrationComponent;
     let fixture: ComponentFixture<RegistrationComponent>;
-    let appService: AppService;
 
-    beforeEach(async () => {
+    beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [
-                RouterTestingModule, MatAutocompleteModule,
+                RouterTestingModule,
+                MatAutocompleteModule,
                 MatButtonModule,
                 MatButtonToggleModule,
                 MatCardModule,
@@ -76,8 +74,8 @@ describe('RegistrationComponent', () => {
                 MatTooltipModule,
                 AppModule,
                 FormsModule,
-                ReactiveFormsModule
-            ]
+                ReactiveFormsModule,
+            ],
         }).compileComponents();
         fixture = TestBed.createComponent(RegistrationComponent);
         component = fixture.componentInstance;
@@ -88,13 +86,13 @@ describe('RegistrationComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('blocks login without a valid email address', async () => {
-        component.registrationForm.controls.email.setValue("admin");
+    it('blocks login without a valid email address', () => {
+        component.registrationForm.controls.email.setValue('admin');
         expect(component.registrationForm.controls.email.valid).toBeFalsy();
     });
 
     it('allows login with a valid email address', () => {
-        component.registrationForm.controls.email.setValue("admin@123.com");
+        component.registrationForm.controls.email.setValue('admin@123.com');
         expect(component.registrationForm.controls.email.valid).toBeTruthy();
     });
 
@@ -122,5 +120,4 @@ describe('RegistrationComponent', () => {
         expect(component.showAccountForm).toBeTruthy();
         expect(component.showVerificationForm).toBeFalsy();
     });
-
 });

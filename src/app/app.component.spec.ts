@@ -1,15 +1,11 @@
-import { TestBed, fakeAsync, getTestBed, tick, async } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
-    beforeEach(async () => {
+    beforeEach( () => {
         TestBed.configureTestingModule({
-            imports: [
-                RouterTestingModule
-            ],
-            declarations: [ 
-                AppComponent
-            ],
+            imports: [RouterTestingModule],
+            declarations: [AppComponent],
         }).compileComponents();
     });
 
@@ -17,8 +13,5 @@ describe('AppComponent', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
-    })
+    });
 });
-
-
-
