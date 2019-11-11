@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -32,7 +32,7 @@ export class ForgotPasswordComponent implements OnInit {
         this.passwordForm.validator = this.matchingPasswords;
     }
 
-    matchingPasswords(AC: AbstractControl) {
+    matchingPasswords(AC: AbstractControl): ValidationErrors {
         if (AC.get('password') && AC.get('confirmPassword')) {
             const password = AC.get('password').value;
             const confirmPassword = AC.get('confirmPassword').value;

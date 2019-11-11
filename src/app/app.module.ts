@@ -7,6 +7,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
+    MatIconRegistry,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
@@ -21,7 +22,6 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
-import { MatIconRegistry } from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';

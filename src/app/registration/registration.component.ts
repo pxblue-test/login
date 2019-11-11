@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
     AbstractControl,
     FormBuilder,
-    FormGroup,
+    FormGroup, ValidationErrors,
     Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -54,7 +54,7 @@ export class RegistrationComponent implements OnInit {
         this.accountForm.validator = this.matchingPasswords;
     }
 
-    matchingPasswords(AC: AbstractControl) {
+    matchingPasswords(AC: AbstractControl): ValidationErrors {
         if (AC.get('password') && AC.get('confirmPassword')) {
             const password = AC.get('password').value;
             const confirmPassword = AC.get('confirmPassword').value;
