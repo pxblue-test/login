@@ -38,6 +38,7 @@
                     </div>
                     <div class="button">
                         <button
+                            type="button"
                             [disabled]="!registrationForm.valid"
                             mat-raised-button
                             color="primary"
@@ -71,6 +72,7 @@
                     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
                         <button mat-raised-button (click)="backtoRegister()">BACK</button>
                         <button
+                            type="button"
                             [disabled]="!verificationForm.valid"
                             mat-raised-button
                             color="primary"
@@ -163,6 +165,7 @@
                     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
                         <button mat-raised-button (click)="backtoLogin()">CANCEL</button>
                         <button
+                            type="button"
                             [disabled]="!accountForm.valid"
                             mat-raised-button
                             color="primary"
