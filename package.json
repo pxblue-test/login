@@ -25,7 +25,8 @@
     "babel-preset-expo": "^5.1.1",
     "jest": "^24.8.0",
     "jest-expo": "^33.0.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6", 
+    "@react-native-community/async-storage/jest/async-storage-mock": "1.6.3"
   },
   "jest": {
     "preset": "jest-expo",
