@@ -18,8 +18,7 @@
     "react-native-elements": "^1.1.0",
     "react-native-web": "^0.11.4",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "^16.8.6",
-    "@react-native-community/async-storage": "1.6.3"
+    "react-test-renderer": "^16.8.6"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.1.1",
@@ -30,7 +29,7 @@
   "jest": {
     "preset": "jest-expo",
     "setupFiles": [
-      "./jest.setup.js"
+      "./jestSetup.js"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|native-base)"
