@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  // NOTE: uncomment the line below in your production code.
   // AsyncStorage,
   View,
 } from 'react-native';
@@ -30,6 +31,7 @@ class Home extends React.Component {
   }
 
   _signOutAsync = async () => {
+    // NOTE: In your production code, uncomment the line below, which is used to clear all the local storages for all clients, libraries.
     // await AsyncStorage.clear();
     this.props.navigation.navigate(ROUTES.AUTH);
   };

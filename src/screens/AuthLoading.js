@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   ActivityIndicator,
+  // NOTE: uncomment the line below in your production code.
   // AsyncStorage,
   StatusBar,
   View,
@@ -17,6 +18,7 @@ class AuthLoading extends React.Component {
 
   // Fetch the token from storage then navigate to our appropriate place
   _bootstrapAsync = async () => {
+    // NOTE: In your production code, uncomment the line below, which is used to fetch the user token stored locally on the device.
     // const userToken = await AsyncStorage.getItem('userToken');
     const userToken = "a";
 
