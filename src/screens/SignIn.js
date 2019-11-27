@@ -6,7 +6,7 @@ import { EMAIL_REGEX } from '../constants/index';
 
 // Components
 import {
-    AsyncStorage,
+    // AsyncStorage,
     View,
     Image,
     StyleSheet,
@@ -31,7 +31,7 @@ class SignIn extends React.Component {
     }
 
     _signInAsync = async () => {
-        await AsyncStorage.setItem('userToken', 'abc');
+        // await AsyncStorage.setItem('userToken', 'abc');
         this.props.navigation.navigate(ROUTES.APP);
     };
 

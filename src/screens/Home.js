@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AsyncStorage,
+  // AsyncStorage,
   View,
 } from 'react-native';
 // import AsyncStorage from '@react-native-community/async-storage';
@@ -30,7 +30,7 @@ class Home extends React.Component {
   }
 
   _signOutAsync = async () => {
-    await AsyncStorage.clear();
+    // await AsyncStorage.clear();
     this.props.navigation.navigate(ROUTES.AUTH);
   };
 }

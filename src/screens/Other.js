@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    AsyncStorage,
+    // AsyncStorage,
     View,
 } from 'react-native';
 import Button from '../components/MatButton';
@@ -29,7 +29,7 @@ class Other extends React.Component {
         );
     }
     _signOutAsync = async () => {
-        await AsyncStorage.clear();
+        // await AsyncStorage.clear();
         this.props.navigation.navigate(ROUTES.AUTH);
     };
 }
