@@ -1,5 +1,8 @@
 import React from 'react';
-import View from 'react-native';
+import {
+    // AsyncStorage,
+    View,
+} from 'react-native';
 import Button from '../components/MatButton';
 
 import { Header } from 'react-native-elements';
