@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    // AsyncStorage,
     View,
 } from 'react-native';
 import Button from '../components/MatButton';
