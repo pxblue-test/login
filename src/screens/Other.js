@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-    // NOTE: uncomment the line below in your production code.
-    // AsyncStorage,
-    View,
-} from 'react-native';
+import View from 'react-native';
 import Button from '../components/MatButton';
-// import AsyncStorage from '@react-native-community/async-storage';
 
 import { Header } from 'react-native-elements';
 import { ROUTES } from '../constants/routes';
@@ -30,8 +25,7 @@ class Other extends React.Component {
         );
     }
     _signOutAsync = async () => {
-        // NOTE: In your production code, uncomment the line below, which is used to clear all the local storages for all clients, libraries.
-        // await AsyncStorage.clear();
+        /* TODO: remove any references to user credentials from application memory and secure storage. */
         this.props.navigation.navigate(ROUTES.AUTH);
     };
 }

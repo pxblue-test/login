@@ -6,15 +6,12 @@ import { EMAIL_REGEX } from '../constants/index';
 
 // Components
 import {
-    // NOTE: uncomment the line below in your production code.
-    // AsyncStorage,
     View,
     Image,
     StyleSheet,
     ScrollView
 } from "react-native";
 import { Card, CheckBox } from "react-native-elements";
-//   import AsyncStorage from '@react-native-community/async-storage';
 
 // Custom styled components
 import Button from '../components/MatButton';
@@ -32,8 +29,7 @@ class SignIn extends React.Component {
     }
 
     _signInAsync = async () => {
-        // NOTE: uncomment the line below in your production code. This sets your userToken in your local storage.
-        // await AsyncStorage.setItem('userToken', 'abc');
+        /* TODO: store the sign in user token locally */
         this.props.navigation.navigate(ROUTES.APP);
     };
 
