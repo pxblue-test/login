@@ -15,7 +15,7 @@ class AuthLoading extends React.Component {
 
   // Fetch the token from storage then navigate to our appropriate place
   _bootstrapAsync = async () => {
-    // const userToken = await AsyncStorage.getItem('userToken');
+    /* TODO: fetch tokens/credentials and load them into the memory. */
     var userToken;
 
     // This will switch to the App screen or Auth screen and this loading
