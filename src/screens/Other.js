@@ -1,10 +1,8 @@
 import React from 'react';
 import {
-    AsyncStorage,
     View,
 } from 'react-native';
 import Button from '../components/MatButton';
-// import AsyncStorage from '@react-native-community/async-storage';
 
 import { Header } from 'react-native-elements';
 import { ROUTES } from '../constants/routes';
@@ -29,7 +27,7 @@ class Other extends React.Component {
         );
     }
     _signOutAsync = async () => {
-        await AsyncStorage.clear();
+        /* TODO: remove any references to user credentials from application memory and secure storage. */
         this.props.navigation.navigate(ROUTES.AUTH);
     };
 }
