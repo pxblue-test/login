@@ -6,7 +6,7 @@ This project demonstrates how to build a basic login page with authentication, r
 | Angular | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/login/tree/angular)
 | React | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/login/tree/react)
 | Ionic | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/login/tree/ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/login@reactnative)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/login/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/login/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/login@reactnative?preview=true&platform=ios)
 
 ## Running the Example
 ### Angular
