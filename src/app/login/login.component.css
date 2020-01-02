@@ -16,7 +16,7 @@ mat-form-field {
 }
 .page-wrap {
     min-height: 100vh;
-    background: url("../../assets/background.a5e70bf8.png"), linear-gradient(135deg, #127cbf 0%, #094d9c 100%);
+    background: url("../../assets/background.png"), linear-gradient(135deg, #127cbf 0%, #094d9c 100%);
     padding: 10px 0;
 }
 .container {
