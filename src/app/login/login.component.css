@@ -16,7 +16,9 @@ mat-form-field{
 } 
 .page-wrap{
   min-height: 100vh;
-  background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%,#094d9c 100%);
+  background: url('../../assets/background.png'), linear-gradient(135deg, #127cbf 0%,#094d9c 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 10px 0;
 }
 .container{
