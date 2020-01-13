@@ -33,7 +33,11 @@
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
-                        <button mat-raised-button (click)="backtologin()">BACK</button>
+                        <button 
+                            mat-raised-button 
+                            (click)="backtologin()"
+                            type="button"
+                        >BACK</button>
                         <button
                             type="button"
                             [disabled]="!emailForm.valid"
@@ -85,7 +89,13 @@
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between">
-                        <button mat-raised-button (click)="backtologin()">CANCEL</button>
+                        <button 
+                            type="button" 
+                            mat-raised-button 
+                            (click)="backtologin()"
+                        >
+                            CANCEL
+                        </button>
                         <button
                             type="button"
                             [disabled]="!passwordForm.valid"
