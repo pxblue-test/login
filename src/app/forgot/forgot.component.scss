@@ -14,9 +14,6 @@
 .text-center{
   text-align: center;
 }
-.full-page{
-  padding-top: 50px;
-}
 
 .resent-code{
   color: #4da3d4;
@@ -29,7 +26,7 @@
 } 
 .left-block{
   color: #fff;
-  background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #127cbf 0%,#094d9c 100%);
+  background: url("../../assets/background.png"), url("https://raw.githubusercontent.com/pxblue/login/angular/src/assets/background.png"), linear-gradient(135deg, #127cbf 0%, #094d9c 100%);
   padding: 7% 0;
 }
 .right-block{
